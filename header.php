@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Anjene Industries</title>
 </head>
-<body>
+<body class="body">
   <header>
     <nav class="nav">
       <div class="nav-container">

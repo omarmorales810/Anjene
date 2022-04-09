@@ -37,10 +37,33 @@ body {
   height:100vh;
 }
 
+/* remove transition on resize (removeTranstionOnResize.js) */
 .remove-all-transitions {
   transition: none !important;
   -webkit-transition: none !important;
 }
+
+/* Style scrollbar */
+::-webkit-scrollbar-thumb {
+	background-color: #606060;
+	border: 4px solid transparent;
+	border-radius: 8px;
+	background-clip: padding-box;
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover {
+	background-color: #909090;
+ }
+
+ ::-webkit-scrollbar-track {
+   background: #000000cc;
+ }
+ 
+ ::-webkit-scrollbar {
+	width: 16px;
+ }
+
+
 
 /* --------------------------- Header --------------------------- */
 .nav {

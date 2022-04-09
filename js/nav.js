@@ -5,6 +5,7 @@ const searchBanner = document.querySelector(".search-banner ");
 const searchClose = document.querySelector(".search-close-icon");
 const navContainer = document.querySelector(".nav-container");
 const searchInput = document.querySelector(".search-input");
+const body = document.querySelector(".body");
 
 search.onclick = () => {
    searchBanner.classList.toggle("active");
