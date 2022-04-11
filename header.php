@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-sc
+  ale=1.0">
+  <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
   <title>Anjene Industries</title>
 </head>
 <body class="body">
   <header>
     <nav class="nav">
       <div class="nav-container">
-        <div id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <div class="burger-container">
+          <div id="burger">
+            <div class="bar topBar"></div>
+            <div class="bar btmBar"></div>
+          </div>   
         </div>
         <div id="logo">
-          <a href="">Anjene Industries</a>
+          <a href=""><span style="text-transform: uppercase;">Anjene</span> Industries</a>
         </div>
         <ul class="nav-categories">
           <li class="nav-item">
@@ -46,9 +52,6 @@
           <div class="bag">
             <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" style="cursor: pointer;" height="44" viewBox="0 0 13 44" width="13"><g fill="none" fill-rule="evenodd"><path d="m0 44h13v-44h-13z"/><path d="m12 25.9c0 .6-.5 1.1-1.1 1.1h-8.8c-.6 0-1.1-.5-1.1-1.1v-7.9c0-.5.5-1 1.1-1h8.9c.6 0 1.1.5 1.1 1.1v7.8zm-5.5-11.9c1.2 0 2.1.9 2.3 2h-4.6c.2-1.1 1.1-2 2.3-2zm4.4 2h-1.1c-.2-1.7-1.6-3-3.3-3s-3.1 1.3-3.3 3h-1.1c-1.2 0-2.1.9-2.1 2.1v7.9c0 1.1.9 2 2.1 2h8.9c1.1 0 2.1-.9 2.1-2.1v-7.9c-.1-1.1-1-2-2.2-2z" fill="#fff"/></g></svg>
           </div>
-          <!-- <div class="profile-name">
-            <a href="">omarmorales810@gmail.com</a>
-          </div> -->
         </div>
       </div>
     </nav>
@@ -64,4 +67,58 @@
       </div>
     </div>
     <div class="search-banner"></div>
+
+    <div class="mobile-nav">
+      <div class="mobile-nav-container">
+        <div class="mobile-nav-search-input-container">
+          <div class="mobile-search-wrapper">
+            <div class="search-box-icon">
+              <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="88" viewBox="0 0 20 88"><rect width="20" height="44" fill="none"/><path d="M13.98,27.343l-3.5-3.5a5.436,5.436,0,1,0-.778.777l3.5,3.5a.55.55,0,1,0,.778-.778ZM1.959,20.418a4.319,4.319,0,1,1,4.319,4.32A4.323,4.323,0,0,1,1.959,20.418Z" fill="gray"/></svg>
+            </div>
+            <input type="text" class="mobile-nav-search-input" placeholder="Search in Anjene Industries">
+            </div>
+        </div>
+        <ul class="mobile-nav-menu">
+          <li class="mobile-nav-item">
+            <a href="" class="mobile-nav-link">Electronic Devices</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="" class="mobile-nav-link">Health & Beauty</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="" class="mobile-nav-link">Babies & Toys</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="" class="mobile-nav-link">Groceries & Pets</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="" class="mobile-nav-link">Home & Living</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="" class="mobile-nav-link">Fashion Accesories</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <div class="window">
+      <div class="header">
+        <div class="burger-container">
+          <div id="burger">
+            <div class="bar topBar"></div>
+            <div class="bar btmBar"></div>
+          </div>   
+        </div>
+        <ul class="menu">
+          <li class="menu-item"><a href="#">Mac</a></li>
+          <li class="menu-item"><a href="#">iPad</a></li>
+          <li class="menu-item"><a href="#">iPhone</a></li>
+          <li class="menu-item"><a href="#">Watch</a></li>
+          <li class="menu-item"><a href="#">TV</a></li>
+          <li class="menu-item"><a href="#">Music</a></li>
+          <li class="menu-item"><a href="#">Support</a></li>
+        </ul>
+        <div class="shop icon icon-bag"></div>
+      </div>
+    </div> -->
   </header>
