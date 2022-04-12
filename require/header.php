@@ -23,7 +23,7 @@
           </div>   
         </div>
         <div id="logo">
-          <a href=""><span style="text-transform: uppercase;">Anjene</span> Industries</a>
+          <a href="">Anjene</a>
         </div>
         <ul class="nav-categories">
           <li class="nav-item">
@@ -73,29 +73,29 @@
         <div class="mobile-nav-search-input-container">
           <div class="mobile-search-wrapper">
             <div class="search-box-icon">
-              <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="88" viewBox="0 0 20 88"><rect width="20" height="44" fill="none"/><path d="M13.98,27.343l-3.5-3.5a5.436,5.436,0,1,0-.778.777l3.5,3.5a.55.55,0,1,0,.778-.778ZM1.959,20.418a4.319,4.319,0,1,1,4.319,4.32A4.323,4.323,0,0,1,1.959,20.418Z" fill="gray"/></svg>
+              <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="88" viewBox="0 0 20 88"><rect width="20" height="90" fill="none"/><path d="M13.98,27.343l-3.5-3.5a5.436,5.436,0,1,0-.778.777l3.5,3.5a.55.55,0,1,0,.778-.778ZM1.959,20.418a4.319,4.319,0,1,1,4.319,4.32A4.323,4.323,0,0,1,1.959,20.418Z" fill="gray"/></svg>
             </div>
             <input type="text" class="mobile-nav-search-input" placeholder="Search in Anjene Industries">
             </div>
         </div>
         <ul class="mobile-nav-menu">
           <li class="mobile-nav-item">
-            <a href="" class="mobile-nav-link">Electronic Devices</a>
+            <a href="" class="mobile-nav-link">Electronic devices</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="" class="mobile-nav-link">Health & Beauty</a>
+            <a href="" class="mobile-nav-link">Health & beauty</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="" class="mobile-nav-link">Babies & Toys</a>
+            <a href="" class="mobile-nav-link">Babies & toys</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="" class="mobile-nav-link">Groceries & Pets</a>
+            <a href="" class="mobile-nav-link">Groceries & pets</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="" class="mobile-nav-link">Home & Living</a>
+            <a href="" class="mobile-nav-link">Home & living</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="" class="mobile-nav-link">Fashion Accesories</a>
+            <a href="" class="mobile-nav-link">Fashion accesories</a>
           </li>
         </ul>
       </div>
