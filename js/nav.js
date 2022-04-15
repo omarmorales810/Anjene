@@ -8,6 +8,7 @@ const searchInput = document.querySelector(".search-input");
 const body = document.querySelector(".body");
 const mobileNav = document.querySelector(".mobile-nav");
 const mobileMenu = document.querySelector(".burger-container");
+const navBag = document.querySelector(".bag");
 
 search.onclick = () => {
    searchBanner.classList.toggle("active");
@@ -35,6 +36,7 @@ searchBanner.onclick = () => {
 mobileMenu.onclick = () => {
   mobileNav.classList.toggle("active");
   mobileMenu.classList.toggle("active");
+  navBag.classList.toggle("active");
 }
 
 window.onresize = () => {
@@ -50,6 +52,7 @@ window.onresize = () => {
   if (window.innerWidth > 830) {
     mobileNav.classList.remove("active");
     mobileMenu.classList.remove("active");
+    navBag.classList.remove("active");
   }
 }
 
@@ -62,4 +65,5 @@ window.onscroll = () => {
 
   mobileNav.classList.remove("active");
   mobileMenu.classList.remove("active");
+  navBag.classList.remove("active");
 }
