@@ -39,7 +39,7 @@ mobileMenu.onclick = () => {
 
 window.onresize = () => {
 
-  if (window.innerWidth < 920) {
+  if (window.innerWidth < 830) {
       searchBanner.classList.remove("active");
       searchBox.classList.remove("active");
       searchBoxContainer.classList.remove("active");
@@ -47,7 +47,7 @@ window.onresize = () => {
       searchInput.value = "";
   }
 
-  if (window.innerWidth > 920) {
+  if (window.innerWidth > 830) {
     mobileNav.classList.remove("active");
     mobileMenu.classList.remove("active");
   }

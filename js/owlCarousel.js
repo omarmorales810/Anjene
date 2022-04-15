@@ -1,5 +1,4 @@
 $(document).ready(function() {
- 
   $("#owl-demo").owlCarousel({
       navigation : true, // Show next and prev buttons
 
@@ -14,7 +13,10 @@ $(document).ready(function() {
       itemsMobile : false,
       autoplay: true,
       autoplayTimeout: 5000,
-      autoplayHoverPause:true,
+      autoplayHoverPause:false,
+      mouseDrag: false,
+      touchDrag: false,
+      dots: true
 
   });
 });
