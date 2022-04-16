@@ -125,7 +125,7 @@
           </div>
           <div class="send-review-btn-container">
             <button class="cancel-review">Cancel</button>
-            <button class="send-review">Send review</button>
+            <button class="send-review">Review</button>
           </div>
         </div>
       </div>
