@@ -60,14 +60,13 @@
         <div class="search-box-icon">
           <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="88" viewBox="0 0 20 88"><rect width="20" height="44" fill="none"/><path d="M13.98,27.343l-3.5-3.5a5.436,5.436,0,1,0-.778.777l3.5,3.5a.55.55,0,1,0,.778-.778ZM1.959,20.418a4.319,4.319,0,1,1,4.319,4.32A4.323,4.323,0,0,1,1.959,20.418Z" fill="gray"/></svg>
         </div>
-        <input type="text" class="search-input" placeholder="Search in Anjene Industries">
+        <input type="text" class="search-input" placeholder="Search in Anjene">
         <div class="search-close-icon">
           <svg fill="gray" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 100%;"><g class="style-scope yt-icon"><path d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z" class="style-scope yt-icon"></path></g></svg>
         </div>
       </div>
     </div>
     <div class="search-banner"></div>
-
     <div class="mobile-nav">
       <div class="mobile-nav-container">
         <div class="mobile-nav-search-input-container">
@@ -75,7 +74,7 @@
             <div class="search-box-icon">
               <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="88" viewBox="0 0 20 88"><rect width="20" height="90" fill="none"/><path d="M13.98,27.343l-3.5-3.5a5.436,5.436,0,1,0-.778.777l3.5,3.5a.55.55,0,1,0,.778-.778ZM1.959,20.418a4.319,4.319,0,1,1,4.319,4.32A4.323,4.323,0,0,1,1.959,20.418Z" fill="gray"/></svg>
             </div>
-            <input type="text" class="mobile-nav-search-input" placeholder="Search in Anjene Industries">
+            <input type="text" class="mobile-nav-search-input" placeholder="Search in Anjene">
             </div>
         </div>
         <ul class="mobile-nav-menu">
@@ -100,25 +99,11 @@
         </ul>
       </div>
     </div>
-
-    <!-- <div class="window">
-      <div class="header">
-        <div class="burger-container">
-          <div id="burger">
-            <div class="bar topBar"></div>
-            <div class="bar btmBar"></div>
-          </div>   
-        </div>
-        <ul class="menu">
-          <li class="menu-item"><a href="#">Mac</a></li>
-          <li class="menu-item"><a href="#">iPad</a></li>
-          <li class="menu-item"><a href="#">iPhone</a></li>
-          <li class="menu-item"><a href="#">Watch</a></li>
-          <li class="menu-item"><a href="#">TV</a></li>
-          <li class="menu-item"><a href="#">Music</a></li>
-          <li class="menu-item"><a href="#">Support</a></li>
-        </ul>
-        <div class="shop icon icon-bag"></div>
-      </div>
-    </div> -->
   </header>
+
+
+
+
+
+
+

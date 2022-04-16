@@ -57,11 +57,11 @@ window.onresize = () => {
 }
 
 window.onscroll = () => {
-  searchBanner.classList.remove("active");
-  searchBox.classList.remove("active");
-  searchBoxContainer.classList.remove("active");
+  // searchBanner.classList.remove("active");
+  // searchBox.classList.remove("active");
+  // searchBoxContainer.classList.remove("active");
   navContainer.classList.remove("active");
-  searchInput.value = "";
+  // searchInput.value = "";
 
   mobileNav.classList.remove("active");
   mobileMenu.classList.remove("active");

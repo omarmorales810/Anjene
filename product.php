@@ -28,24 +28,24 @@
           <span class="page-product-price"><span style="font-size: 1.1rem;">₱</span> 4000.00</span>
         </div>
         <div class="shipping-fee-container">
-          <div class="shipping-fee-svg">
-            <svg style="width: 20px; height: 20px;" enable-background="new 0 0 18 18" viewBox="0 0 18 18" class="shopee-svg-icon icon-shipping-airplane"><path d="m15 4s2.7-1.1 2.5 2c-1.8.7-5.6 2.6-5.6 2.6l-2.8 5.1-2.1 1.3 1.7-5-6.7 3v-2l-1.5-2 1.2-.9 1.6 1.6 2.5-1.3-2.8-2.4 2-1 3.3 2.2z" fill="#1d1d1f" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          </div>
           <div class="shipping-fee-description">Shipping fee</div>
           <div class="shpping-fee">₱70.00</div>
+          <div class="shipping-fee-svg">
+            <!-- <svg style="width: 30px; height: 30px; position: relative; left: 7px; top: -6px" enable-background="new 0 0 18 18" viewBox="0 0 18 18" class="shopee-svg-icon icon-shipping-airplane"><path d="m15 4s2.7-1.1 2.5 2c-1.8.7-5.6 2.6-5.6 2.6l-2.8 5.1-2.1 1.3 1.7-5-6.7 3v-2l-1.5-2 1.2-.9 1.6 1.6 2.5-1.3-2.8-2.4 2-1 3.3 2.2z" fill="#1d1d1f" stroke-linecap="round" stroke-linejoin="round"></path></svg> -->
+          </div>
         </div>
         <div class="quantity">
-          <div class="quantity-text">Quantity</div>
+          <div class="quantity-text">Select quantity</div>
           <div class="quantity-btn-container">
             <button class="quantity-btn-increment quantity-btn">
-              <svg style="width: 15px; height: 20px" fill="#707070" enable-background="new 0 0 10 10" viewBox="0 0 10 10" x="0" y="0" class="shopee-svg-icon icon-plus-sign"><polygon points="10 4.5 5.5 4.5 5.5 0 4.5 0 4.5 4.5 0 4.5 0 5.5 4.5 5.5 4.5 10 5.5 10 5.5 5.5 10 5.5"></polygon></svg>
+              <svg style="width: 12px; height: 20px" fill="#707070" enable-background="new 0 0 10 10" viewBox="0 0 10 10" x="0" y="0" class="shopee-svg-icon icon-plus-sign"><polygon points="10 4.5 5.5 4.5 5.5 0 4.5 0 4.5 4.5 0 4.5 0 5.5 4.5 5.5 4.5 10 5.5 10 5.5 5.5 10 5.5"></polygon></svg>
             </button>
             <input type="text" class="quantity-input">
             <button class="quantity-btn-decrement quantity-btn">
-              <svg style="width: 15px; height: 20px" fill="#707070" enable-background="new 0 0 10 10" viewBox="0 0 10 10" x="0" y="0" class="shopee-svg-icon"><polygon points="4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5"></polygon></svg>
+              <svg style="width: 12px; height: 20px" fill="#707070" enable-background="new 0 0 10 10" viewBox="0 0 10 10" x="0" y="0" class="shopee-svg-icon"><polygon points="4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5"></polygon></svg>
             </button>
+            <div class="stocks">70 pieces left</div>
           </div>
-          <div class="stocks">99, 000 stocks available</div>
         </div>
         <div class="page-product-link">
           <span class="add-to-cart-link">Add to bag <i class="fas fa-chevron-right"></i></span>
@@ -54,18 +54,15 @@
       </div>
     </div>
   </div>
-
-
-  <section class="product-description-section">
+  <div class="product-description-section">
     <div class="product-description-section-container">
       <header>Product description</header>
       <p class="product-description-section-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti itaque fugiat tenetur atque modi porro eos similique quas quae cumque voluptatum facere vitae asperiores, magni quis sequi et voluptatem, odit, molestiae qui. Ducimus perferendis nam quae, perspiciatis delectus, distinctio dignissimos sint laudantium nobis porro in facere beatae autem corporis. Cumque, explicabo quas nulla aspernatur voluptatum adipisci dolore iure, necessitatibus ea aliquid beatae, illum deleniti cupiditate accusantium. Sit dolorum dolor, reiciendis optio impedit, itaque distinctio molestiae deserunt fuga velit, corrupti nam repellendus eaque quae consequatur pariatur. Inventore quo iure quam tenetur odio delectus ratione cumque facere blanditiis dolore eligendi corporis, perspiciatis maxime minima odit fugiat. Quaerat voluptatem magni dolores assumenda, pariatur deserunt voluptas adipisci optio. Temporibus quae aperiam maxime libero, ducimus velit porro iste id ab quos mollitia cum? Expedita rem sapiente similique, quasi laudantium doloribus ut illo dolor quisquam, harum praesentium, sint velit earum. Tenetur enim dolorem voluptatem animi, illo libero veniam iure eius provident aperiam ea, voluptates excepturi recusandae sequi rem reiciendis porro deleniti doloribus aspernatur eaque eos assumenda! Suscipit dolorum molestiae dignissimos, laborum aperiam vero, ullam excepturi placeat ex doloribus inventore cumque, distinctio temporibus aspernatur! Corrupti reprehenderit sed quidem, in eveniet iste doloremque ea, quos, quasi ipsum veritatis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis optio totam eaque dolor modi. Quod in incidunt quaerat! Quo, aliquam sunt alias, fugiat doloremque eaque eos, autem animi placeat voluptatum quos veniam quia officia totam illum velit! Doloremque amet, dolores voluptate harum consequuntur architecto eaque eligendi? Nihil, sapiente? Assumenda tenetur hic quae aliquam nisi sequi expedita, sit, maxime sed nulla vel debitis asperiores beatae, tempore excepturi nihil sint. Sint, earum molestiae. Cumque, nam doloribus alias molestias voluptas, dolorem, animi nulla impedit dolor aliquam maiores? Eos laboriosam aperiam sed aliquid deleniti! Quo ut laudantium, soluta assumenda odit culpa repellendus? Explicabo quidem itaque deleniti autem rem dolore excepturi ratione quaerat dolores! Animi eaque perferendis alias necessitatibus cumque, enim delectus blanditiis doloremque omnis illo nisi earum unde placeat voluptates deleniti aut commodi repellat recusandae, quia quibusdam ducimus perspiciatis.
       </p>
     </div>
-  </section>
-
-  <section class="product-review-section">
+  </div>
+  <div class="product-review-section">
     <div class="product-review-section-container">
       <header>Product reviews</header>
       <div class="reviews">
@@ -116,23 +113,28 @@
           </div>
         </div>
       </div>
-
       <!-- comment reviews -->
       <div class="user-review">
         <div class="profile">
           <img src="./img/blank-profile.jpeg" alt="">
         </div>
         <div class="type-comment-box">
-          <input placeholder="Type your comment..." type="text" class="comment-input">
-          <div class="comment-input-border-bottom"></div>
+          <div class="send-review-input-container">
+            <input placeholder="Add your reviews or suggestions" type="text" class="comment-input">
+            <div class="comment-input-border-bottom"></div>
+          </div>
+          <div class="send-review-btn-container">
+            <button class="cancel-review">Cancel</button>
+            <button class="send-review">Send review</button>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-
+  </div>
 
   <!-- Javascript -->
   <script src="./js/nav.js"></script>
+  <script src="./js/product.js"></script>
   <script src="./js/removeTransitionOnResize.js"></script>
 
 <?php require_once "./require/footer.php" ?>
