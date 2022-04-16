@@ -18,7 +18,7 @@
             <div class="easy-return-svg">
               <svg viewBox="0 0 35 35" class="as-svgicon as-svgicon-return as-svgicon-base as-svgicon-returnbase" role="img" aria-hidden="true" width="35px" height="35px"><path fill="none" d="M0 0h35v35H0z"></path><path d="M12.249 9.022l-4.461 2.4c-.041.022-.073.055-.111.081l9.823 5.588 4.4-2.5zM27.322 11.507c-.038-.025-.069-.058-.11-.081l-9-4.852a1.5 1.5 0 00-1.424 0l-3.5 1.889 9.628 5.55zM10.8 18.5a.5.5 0 01-.5.5H7v3.219a1.5 1.5 0 00.788 1.32l9 4.852a1.494 1.494 0 00.212.082V17.957l-9.931-5.645a1.494 1.494 0 00-.069.436V18h3.3a.5.5 0 01.5.5zM18 17.957v10.515a1.481 1.481 0 00.212-.082l9-4.851a1.5 1.5 0 00.788-1.32v-9.471a1.5 1.5 0 00-.069-.436z" fill="none"></path><path d="M27.687 10.547l-9-4.852a2.5 2.5 0 00-2.373 0l-9 4.852A2.5 2.5 0 006 12.748V17h1v-4.252a1.494 1.494 0 01.069-.436L17 17.957v10.516a1.494 1.494 0 01-.212-.082l-9-4.852A1.5 1.5 0 017 22.219V20H6v2.219a2.494 2.494 0 001.313 2.2l9 4.852a2.5 2.5 0 002.373 0l9-4.852a2.5 2.5 0 001.314-2.2v-9.471a2.5 2.5 0 00-1.313-2.201zm-10.9-3.971a1.5 1.5 0 011.424 0l9 4.852c.041.022.072.055.11.081l-4.41 2.507-9.628-5.55zm-9.11 4.932c.038-.026.07-.059.111-.081l4.461-2.4 9.651 5.561-4.4 2.5zM28 22.219a1.5 1.5 0 01-.788 1.32l-9 4.851a1.481 1.481 0 01-.212.082V17.957l9.931-5.646a1.5 1.5 0 01.069.436z"></path><path d="M2.507 18l1.646-1.646a.5.5 0 00-.707-.707l-2.5 2.5a.5.5 0 000 .707l2.5 2.5a.5.5 0 10.707-.707L2.507 19H6v-1zM10.3 19a.5.5 0 000-1H7v1zM6 18h1v1H6z"></path></svg>
             </div>
-            <div class="product-buy-text">Not free delivery but easy returns</div>
+            <div class="product-buy-text">Not free shipping but easy returns</div>
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@
         </div>
         <div class="shipping-fee-container">
           <div class="shipping-fee-svg">
-            <svg style="width: 21px; height: 21px;" enable-background="new 0 0 18 18" viewBox="0 0 18 18" class="shopee-svg-icon icon-shipping-airplane"><path d="m15 4s2.7-1.1 2.5 2c-1.8.7-5.6 2.6-5.6 2.6l-2.8 5.1-2.1 1.3 1.7-5-6.7 3v-2l-1.5-2 1.2-.9 1.6 1.6 2.5-1.3-2.8-2.4 2-1 3.3 2.2z" fill="#bf4800" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <svg style="width: 20px; height: 20px;" enable-background="new 0 0 18 18" viewBox="0 0 18 18" class="shopee-svg-icon icon-shipping-airplane"><path d="m15 4s2.7-1.1 2.5 2c-1.8.7-5.6 2.6-5.6 2.6l-2.8 5.1-2.1 1.3 1.7-5-6.7 3v-2l-1.5-2 1.2-.9 1.6 1.6 2.5-1.3-2.8-2.4 2-1 3.3 2.2z" fill="#1d1d1f" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </div>
           <div class="shipping-fee-description">Shipping fee</div>
           <div class="shpping-fee">₱70.00</div>
@@ -54,6 +54,81 @@
       </div>
     </div>
   </div>
+
+
+  <section class="product-description-section">
+    <div class="product-description-section-container">
+      <header>Product description</header>
+      <p class="product-description-section-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti itaque fugiat tenetur atque modi porro eos similique quas quae cumque voluptatum facere vitae asperiores, magni quis sequi et voluptatem, odit, molestiae qui. Ducimus perferendis nam quae, perspiciatis delectus, distinctio dignissimos sint laudantium nobis porro in facere beatae autem corporis. Cumque, explicabo quas nulla aspernatur voluptatum adipisci dolore iure, necessitatibus ea aliquid beatae, illum deleniti cupiditate accusantium. Sit dolorum dolor, reiciendis optio impedit, itaque distinctio molestiae deserunt fuga velit, corrupti nam repellendus eaque quae consequatur pariatur. Inventore quo iure quam tenetur odio delectus ratione cumque facere blanditiis dolore eligendi corporis, perspiciatis maxime minima odit fugiat. Quaerat voluptatem magni dolores assumenda, pariatur deserunt voluptas adipisci optio. Temporibus quae aperiam maxime libero, ducimus velit porro iste id ab quos mollitia cum? Expedita rem sapiente similique, quasi laudantium doloribus ut illo dolor quisquam, harum praesentium, sint velit earum. Tenetur enim dolorem voluptatem animi, illo libero veniam iure eius provident aperiam ea, voluptates excepturi recusandae sequi rem reiciendis porro deleniti doloribus aspernatur eaque eos assumenda! Suscipit dolorum molestiae dignissimos, laborum aperiam vero, ullam excepturi placeat ex doloribus inventore cumque, distinctio temporibus aspernatur! Corrupti reprehenderit sed quidem, in eveniet iste doloremque ea, quos, quasi ipsum veritatis.
+      </p>
+    </div>
+  </section>
+
+  <section class="product-review-section">
+    <div class="product-review-section-container">
+      <header>Product reviews</header>
+      <div class="reviews">
+        <div class="profile">
+          <img src="./img/blank-profile.jpeg" alt="">
+        </div>
+        <div class="comment-box">
+          <div class="profile-name">Cathy Quiza</div>
+          <div class="comment-time">2022-02-08 21:59</div>
+          <div class="comment">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos doloribus placeat qui error voluptas deserunt cum est accusantium animi officiis, repellat debitis veniam iure adipisci porro odio, alias facere magnam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae illum optio tempora fuga nostrum vero quia. Blanditiis molestiae atque quaerat! Debitis dolor odio ex labore repellat eligendi amet nulla animi, ratione saepe adipisci fuga ipsam accusantium, distinctio a excepturi expedita fugiat minus architecto exercitationem perspiciatis nemo mollitia! Ducimus sit consequatur reiciendis deserunt, perspiciatis ex voluptates vitae accusantium obcaecati nesciunt, minus rem eaque quisquam dolores saepe placeat, repellendus numquam natus nihil illum exercitationem temporibus alias voluptatem! Distinctio praesentium fugiat nulla, beatae doloribus inventore perferendis natus molestiae libero nostrum rerum! Officia beatae, quasi hic repellat nesciunt autem quis maiores accusamus minus architecto at illo, omnis nostrum doloribus placeat fugit. Quod tempore nobis sequi voluptates, nihil quibusdam ipsa ut, maiores iste quis, fuga eligendi labore illum. Ad ratione expedita quia, iure blanditiis atque est fugit! Autem, corporis molestiae odio laboriosam aliquid quibusdam fugit excepturi, harum, officia delectus labore quis quasi ab facere ex perspiciatis laborum quod nobis nostrum enim. Molestiae optio esse hic harum quod nostrum quis aliquam expedita aliquid ad eligendi provident veniam atque architecto velit distinctio quasi impedit, corrupti laudantium explicabo fuga odio in eum qui. Enim harum ab maiores dolores voluptatibus! Animi tenetur inventore nihil impedit earum rem deserunt!
+          </div>
+        </div>
+      </div>
+      <div class="reviews">
+        <div class="profile">
+          <img src="./img/blank-profile.jpeg" alt="">
+        </div>
+        <div class="comment-box">
+          <div class="profile-name">Marlon Adova</div>
+          <div class="comment-time">2022-02-08 21:59</div>
+          <div class="comment">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos doloribus placeat qui error voluptas deserunt cum est accusantium animi officiis, repellat debitis veniam iure adipisci porro odio, alias facere magnam.
+          </div>
+        </div>
+      </div>
+      <div class="reviews">
+        <div class="profile">
+          <img src="./img/blank-profile.jpeg" alt="">
+        </div>
+        <div class="comment-box">
+          <div class="profile-name">Mandy Ruazol</div>
+          <div class="comment-time">2022-02-08 21:59</div>
+          <div class="comment">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos doloribus placeat qui error voluptas deserunt cum est accusantium animi officiis, repellat debitis veniam iure adipisci porro odio, alias facere magnam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor praesentium harum vel ut sint ex, enim facilis eum sapiente expedita magnam voluptatibus veritatis nihil non possimus cum voluptate. Modi magnam, inventore totam voluptatum delectus earum amet hic vero natus blanditiis voluptatem! Magnam quia et adipisci in distinctio debitis molestias mollitia quibusdam similique a iure eos vitae, consectetur, quas aliquid animi ea quod eum dolorum, ad sit. Facere esse voluptatem nulla repellat, nemo perspiciatis placeat voluptate veritatis, officiis id ratione culpa obcaecati illo nam amet vel. Doloremque non voluptates molestias omnis!
+          </div>
+        </div>
+      </div>
+      <div class="reviews">
+        <div class="profile">
+          <img src="./img/blank-profile.jpeg" alt="">
+        </div>
+        <div class="comment-box">
+          <div class="profile-name">Princess Pocon</div>
+          <div class="comment-time">2022-02-08 21:59</div>
+          <div class="comment">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </div>
+        </div>
+      </div>
+
+      <!-- comment reviews -->
+      <div class="user-review">
+        <div class="profile">
+          <img src="./img/blank-profile.jpeg" alt="">
+        </div>
+        <div class="type-comment-box">
+          <input placeholder="Type your comment..." type="text" class="comment-input">
+          <div class="comment-input-border-bottom"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <!-- Javascript -->
