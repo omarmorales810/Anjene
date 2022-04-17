@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
 
+@import url('http://fonts.cdnfonts.com/css/sf-pro-display');
+
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Assistant:wght@200;300;400;500;600;700;800&family=Baloo+Thambi+2&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Cedarville+Cursive&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Fira+Code:wght@300;400;500;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Hind:wght@300;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mukta:wght@200;300;400;500;600;700;800&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oxygen:wght@300;400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Varela+Round&family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'roboto', sans-serif;
   user-select: none !important;
+  font-family: 'SF Pro Display', 'roboto', 'sans-serif';
   /* color: #1d1d1f; */
 }
 
@@ -743,14 +745,14 @@ img {
 
 .tile-description .product-name {
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-decoration: none;
   color: #1d1d1f;
   transition: color 200ms ease;
 }
 
 .product-name:hover {
-  color: #06c;
+  color: #0066cc;
   
 }
 
@@ -758,7 +760,7 @@ img {
   font-size: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #1d1d1f;
 }
@@ -1023,6 +1025,7 @@ img {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  gap: 1rem;
 }
 
 .product-buy-column {
@@ -1033,7 +1036,7 @@ img {
 }
 
 .product-buy-text {
-  font-size: 0.8rem;
+  font-size: .9rem;
   font-weight: 500;
   text-align: center;
   color: #1d1d1f;
@@ -1142,7 +1145,7 @@ img {
 
 .page-product-link .buy-now-link {
   font-size: 18px;
-  color: #06c;
+  color: #0066cc;
   cursor: pointer;
 }
 
@@ -1152,7 +1155,7 @@ img {
 
 .page-product-link .add-to-cart-link {
   font-size: 18px;
-  color: #06c;
+  color: #0066cc;
   cursor: pointer;
 }
 
@@ -1362,7 +1365,7 @@ img {
 
 .send-review.active2 {
   pointer-events: all;
-  background: #0070c9;
+  background: #0066cc;
 }
 
 .cancel-review {
@@ -1389,3 +1392,184 @@ img {
 
 
 /* --------------------------- #Product Page --------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- Search --------------------------- */
+
+
+.search-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-page-container {
+  max-width: 910px;
+  width: 100%;
+}
+
+.no-result-container {
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-result-text {
+  font-size: 35px;
+  font-weight: 500;
+  color: #1d1d1f;
+}
+
+.search-page-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.7rem;
+}
+
+.search-page-icon svg {
+  width: 100% !important;
+  height: 100% !important;
+  fill: #1d1d1f;
+  max-width: 100px !important;
+}
+
+.search-result-text-small {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0.7rem;
+  max-width: 700px;
+  text-align: center;
+  line-height: 30px;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #1d1d1f;
+}
+
+
+
+
+
+
+
+.search-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.search-item .search-item-header {
+  font-size: 21px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0 ,0.1);
+  width: 100%;
+}
+
+.search-item .search-item-container {
+  padding: 1rem 0;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.searched-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.search-item-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.search-item-name {
+  font-size: 21px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #1d1d1f;
+}
+
+.search-item-name:hover {
+  color: #0066cc;
+}
+
+.search-item-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.search-item-short-description {
+  font-size: 17px;
+  font-weight: 400;
+  color: #1d1d1f;
+}
+
+.search-item-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.search-item-link {
+  font-size: 17px;
+  color: #0066cc;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.search-item-link i {
+  font-size: 0.9rem;
+}
+
+.search-item-link:hover {
+  text-decoration: underline;
+}
+
+.search-item-img-container img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 950px) {
+  .search-item {
+    padding: 0 20px;
+  }
+}
+
+
+
+/* --------------------------- #Search --------------------------- */
+
+
+
+
+
+
+

@@ -29,7 +29,7 @@
         </div>
         <div class="shipping-fee-container">
           <div class="shipping-fee-description">Shipping fee</div>
-          <div class="shpping-fee">₱70.00</div>
+          <div class="shpping-fee"><span style="font-size: 0.9rem;">₱</span>70.00</div>
           <div class="shipping-fee-svg">
             <!-- <svg style="width: 30px; height: 30px; position: relative; left: 7px; top: -6px" enable-background="new 0 0 18 18" viewBox="0 0 18 18" class="shopee-svg-icon icon-shipping-airplane"><path d="m15 4s2.7-1.1 2.5 2c-1.8.7-5.6 2.6-5.6 2.6l-2.8 5.1-2.1 1.3 1.7-5-6.7 3v-2l-1.5-2 1.2-.9 1.6 1.6 2.5-1.3-2.8-2.4 2-1 3.3 2.2z" fill="#1d1d1f" stroke-linecap="round" stroke-linejoin="round"></path></svg> -->
           </div>
