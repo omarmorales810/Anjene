@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-sc
   ale=1.0">
   <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
@@ -24,26 +24,26 @@
           </div>   
         </div>
         <div id="logo">
-          <a href="index.php">Anjene</a>
+          <a href="../index.php">Anjene</a>
         </div>
         <ul class="nav-categories">
           <li class="nav-item">
-            <a href="./categories/electronic-devices.php" class="nav-link">Electronic Devices</a>
+            <a href="../categories/electronic-devices.php" class="nav-link">Electronic Devices</a>
           </li>
           <li class="nav-item">
-            <a href="./categories/health-and-beauty.php" class="nav-link">Health & Beauty</a>
+            <a href="../categories/health-and-beauty.php" class="nav-link">Health & Beauty</a>
           </li>
           <li class="nav-item">
-            <a href="./categories/babies-and-toys.php" class="nav-link">Babies & Toys</a>
+            <a href="../categories/babies-and-toys.php" class="nav-link">Babies & Toys</a>
           </li>
           <li class="nav-item">
-            <a href="./categories/groceries-and-pets.php" class="nav-link">Groceries & Pets</a>
+            <a href="../categories/groceries-and-pets.php" class="nav-link">Groceries & Pets</a>
           </li>
           <li class="nav-item">
-            <a href="./categories/home-and-living.php" class="nav-link">Home & Living</a>
+            <a href="../categories/home-and-living.php" class="nav-link">Home & Living</a>
           </li>
           <li class="nav-item">
-            <a href="./categories/home-and-living.php" class="nav-link">Fashion Accesories</a>
+            <a href="../categories/fashion-accesories.php" class="nav-link">Fashion Accesories</a>
           </li>
         </ul>
         <div class="nav-profile">
@@ -80,31 +80,24 @@
         </div>
         <ul class="mobile-nav-menu">
           <li class="mobile-nav-item">
-            <a href="./categories/electronic-devices.php" class="mobile-nav-link">Electronic devices</a>
+            <a href="../categories/electronic-devices.php" class="mobile-nav-link">Electronic devices</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="./categories/health-and-beauty.php" class="mobile-nav-link">Health & beauty</a>
+            <a href="../categories/health-and-beauty.php" class="mobile-nav-link">Health & beauty</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="./categories/babies-and-toys.php" class="mobile-nav-link">Babies & toys</a>
+            <a href="../categories/babies-and-toys.php" class="mobile-nav-link">Babies & toys</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="./categories/groceries-and-pets.php" class="mobile-nav-link">Groceries & pets</a>
+            <a href="../categories/groceries-and-pets.php" class="mobile-nav-link">Groceries & pets</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="./categories/home-and-living.php" class="mobile-nav-link">Home & living</a>
+            <a href="../categories/home-and-living.php" class="mobile-nav-link">Home & living</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="./categories/fashion-accesories.php" class="mobile-nav-link">Fashion accesories</a>
+            <a href="../categories/fashion-accesories.php" class="mobile-nav-link">Fashion accesories</a>
           </li>
         </ul>
       </div>
     </div>
   </header>
-
-
-
-
-
-
-
