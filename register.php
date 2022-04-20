@@ -4,7 +4,7 @@
   <div class="form-wrapper">
     <header class="header">Create Your Account</header>
     <div class="intro-form-text">
-      <span>Your need to create your own account, so you can go shopping.</span>
+      <span>Your need to create your own account, before you can go shopping.</span>
       <span>already have an account? <a href="login.php">Login now</a></span>
     </div>
     <div class="alert"></div>
@@ -16,9 +16,6 @@
         <div class="field">
           <input type="text" placeholder="Surname" name="surname" autocomplete="off">
         </div>
-      </div>
-      <div class="field">
-        <input type="text" placeholder="Phone number" name="phone-number" autocomplete="off">
       </div>
       <div class="field">
         <input type="text" placeholder="Email Address" name="email" autocomplete="off">

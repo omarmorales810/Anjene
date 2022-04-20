@@ -18,7 +18,6 @@ signUpBtn.addEventListener('click', () => {
         if (data == 'success') {
           alert("Your account has been created");
           location.href = 'login.php';
-
         }
         else {
           alertBox.innerHTML = data;

@@ -10,6 +10,7 @@
   box-sizing: border-box;
   font-family: 'SF Pro Display', 'roboto', 'sans-serif';
   /* color: #1d1d1f; */
+  -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
@@ -261,23 +262,34 @@ img {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  height: 50px;
+  height: 40px;
   width: 100%;
   transition: opacity 500ms ease;
 }
 
 .search {
   width: 100%;
-  padding-right: 1rem;
+  margin-right: 1rem;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .search, .search-box-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  /* background-color: red; */
+}
+
+.search-svg {
   position: relative;
   top: 1.4rem;
-  cursor: pointer;
+  pointer-events: none;
+  background-color: none;
 }
 
 .search-box-icon {
@@ -910,7 +922,7 @@ img {
 
 .form .name-field {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -1268,10 +1280,10 @@ img {
 .product-description-section-container header {
   font-size: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-bottom: 1rem;
+  padding-bottom: 0.7rem;
   font-weight: 400;
   text-align: start;
-  margin-bottom: 16px;
+  margin-bottom: 0.7rem;
 }
 
 .product-description-section-text {
@@ -1310,14 +1322,14 @@ img {
   margin-bottom: 0rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 0.7rem;
 }
 
 .reviews {
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
-  padding: 20px 20px;
+  padding: 20px 0px;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
   width: 100%;
 }
@@ -1354,7 +1366,7 @@ img {
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
-  padding: 20px 20px;
+  padding: 20px 0px;
   padding-right: 0;
   width: 100%;
   position: relative;
@@ -1552,22 +1564,6 @@ img {
 
   .shipping-fee {
     font-size: 14px;
-  }
-
-  .add-to-cart-link {
-    font-size: 14px !important;
-  }
-
-  .buy-now-link {
-    font-size: 14px !important;
-  }
-
-  .add-to-cart-link i {
-    font-size: 12px !important;
-  }
-
-  .buy-now-link  i {
-    font-size: 12px !important;
   }
 }
 

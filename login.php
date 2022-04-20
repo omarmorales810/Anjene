@@ -6,6 +6,7 @@
     <div class="intro-form-text">
       <span>Don't have an account? <a href="register.php">Register now</a></span>
     </div>
+    <div class="alert"></div>
     <form action="#" class="form sign-in">
       <div class="field">
         <input type="text" placeholder="Email Address" name="email" autocomplete="off">
@@ -32,4 +33,5 @@
   <script src="./js/nav.js"></script>
   <script src="./js/removeTransitionOnResize.js"></script>
   <script src="./js/showEye.js"></script>
+  <script src="./js/signin.js"></script>
 <?php require_once "./require/footer.php"; ?>

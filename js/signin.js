@@ -1,24 +1,30 @@
+const Loginform = document.querySelector('.sign-in');
+const signInBtn = document.querySelector('.login-submit-btn');
+const alertBoxLogin = document.querySelector('.alert');
 
-const form = document.querySelector('.sign-in');
-const signUpBtn = document.querySelector('.login-submit-btn');
-const alertBox = document.querySelector('.alert');
-
-form.addEventListener('submit', (e) => {
+Loginform.addEventListener('submit', (e) => {
   e.preventDefault(); // Preventing form from submitting
 });
 
-signUpBtn.addEventListener('click', () => {
+signInBtn.addEventListener('click', () => {
   let xhr = new XMLHttpRequest(); // Creating XML object
-  xhr.open('POST', './php/signup.php', true);
+  xhr.open('POST', './php/signin.php', true);
   xhr.addEventListener('load', () => {
     if(xhr.readyState === XMLHttpRequest.DONE) {
       if(xhr.status === 200) {
         let data = xhr.response;
-        alertBox.innerHTML = data;
-
+        
+        if (data == 'success') {
+          alert("successfully loggedin");
+          location.href = 'index.php';
+        }
+        else {
+          alertBoxLogin.style.display = 'flex';
+          alertBoxLogin.innerHTML = data;
+        }
       }
     }
   });
-  let formData = new FormData(form); // Creating new formData object
+  let formData = new FormData(Loginform); // Creating new formData object
   xhr.send(formData);
 });
