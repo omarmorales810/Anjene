@@ -1,11 +1,30 @@
-<?php require_once "./require/header.php" ?>
+<?php 
+
+  require_once "./require/header.php";
+  require_once "./require/config.php";
+  require_once "./require/display-error.php";
+  
+  $product_id = mysqli_real_escape_string($conn, $_GET["product_id"]);
+  $sql = "SELECT * FROM product WHERE id = '{$product_id}'";
+  $result = mysqli_query($conn, $sql);
+  $rowCoutn = mysqli_num_rows($result);
+
+  if ($row = mysqli_fetch_assoc($result)) {
+    $product_name = $row["name"];
+    $product_image = $row["image"];
+    $product_price = $row["price"];
+    $product_description = $row["description"];
+
+  }
+
+?>
 
   <!-- Page product -->
   <div class="page-product">
     <div class="page-product-container">
       <div class="page-product-left">
         <div class="page-product-img">
-          <img src="./img/molten.png" alt="">
+          <img src="./img/<?php echo $product_image ?>" alt="">
         </div>
         <div class="product-buy">
           <div class="product-buy-column">
@@ -24,14 +43,13 @@
       </div>
       <div class="page-product-right">
         <div class="page-product-description">
-          <div class="page-product-name">Molten original GG7X basketball Official Size 7 basketball</div>
-          <span class="page-product-price"><span style="font-size: 1.1rem;">₱</span> 4000.00</span>
+          <div class="page-product-name"><?php echo $product_name ?></div>
+          <span class="page-product-price"><span style="font-size: 1.2rem;">₱</span><?php echo number_format( $product_price, 2, '.', ', ' ) ?></span>
         </div>
         <div class="shipping-fee-container">
           <div class="shipping-fee-description">Shipping fee</div>
           <div class="shpping-fee"><span style="font-size: 0.9rem;">₱</span>70.00</div>
           <div class="shipping-fee-svg">
-            <!-- <svg style="width: 30px; height: 30px; position: relative; left: 7px; top: -6px" enable-background="new 0 0 18 18" viewBox="0 0 18 18" class="shopee-svg-icon icon-shipping-airplane"><path d="m15 4s2.7-1.1 2.5 2c-1.8.7-5.6 2.6-5.6 2.6l-2.8 5.1-2.1 1.3 1.7-5-6.7 3v-2l-1.5-2 1.2-.9 1.6 1.6 2.5-1.3-2.8-2.4 2-1 3.3 2.2z" fill="#1d1d1f" stroke-linecap="round" stroke-linejoin="round"></path></svg> -->
           </div>
         </div>
         <div class="quantity">
@@ -58,7 +76,7 @@
     <div class="product-description-section-container">
       <header>Product description</header>
       <p class="product-description-section-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis optio totam eaque dolor modi. Quod in incidunt quaerat! Quo, aliquam sunt alias, fugiat doloremque eaque eos, autem animi placeat voluptatum quos veniam quia officia totam illum velit! Doloremque amet, dolores voluptate harum consequuntur architecto eaque eligendi? Nihil, sapiente? Assumenda tenetur hic quae aliquam nisi sequi expedita, sit, maxime sed nulla vel debitis asperiores beatae, tempore excepturi nihil sint. Sint, earum molestiae. Cumque, nam doloribus alias molestias voluptas, dolorem, animi nulla impedit dolor aliquam maiores? Eos laboriosam aperiam sed aliquid deleniti! Quo ut laudantium, soluta assumenda odit culpa repellendus? Explicabo quidem itaque deleniti autem rem dolore excepturi ratione quaerat dolores! Animi eaque perferendis alias necessitatibus cumque, enim delectus blanditiis doloremque omnis illo nisi earum unde placeat voluptates deleniti aut commodi repellat recusandae, quia quibusdam ducimus perspiciatis.
+        <?php echo $product_description ?>
       </p>
     </div>
   </div>

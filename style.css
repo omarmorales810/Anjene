@@ -1057,8 +1057,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
-  padding-bottom: 30px;
 }
 
 .page-product-container {
@@ -1066,6 +1066,7 @@ img {
   display: flex;
   flex-direction: row;
   gap: 3rem;
+  margin-bottom: 20px;
 }
 
 .page-product-img img {
@@ -1075,7 +1076,6 @@ img {
 }
 
 .page-product-description {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
