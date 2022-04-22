@@ -11,38 +11,82 @@ const mobileMenu = document.querySelector(".burger-container");
 const navBag = document.querySelector(".bag");
 const bagViewBox = document.querySelector(".bag-view-content");
 
+let resetTimer2;
+let toggleTrue = true;
+
 search.onclick = () => {
-   searchBanner.classList.toggle("active");
-  searchBox.classList.toggle("active");
-  searchBoxContainer.classList.toggle("active");
-  navContainer.classList.toggle("active");
+  if (toggleTrue == true) {
+    toggleTrue = false;
+    searchBanner.classList.toggle("active");
+    searchBox.classList.toggle("active");
+    searchBoxContainer.classList.toggle("active");
+    navContainer.classList.toggle("active");
+  }
+
+  clearTimeout(resetTimer2);
+  resetTimer2 = setTimeout(() => {
+    toggleTrue = true;
+  }, 300);
 }
 
 searchClose.onclick = () => {
-  searchBanner.classList.remove("active");
-  searchBox.classList.remove("active");
-  searchBoxContainer.classList.remove("active");
-  navContainer.classList.remove("active");
-  searchInput.value = "";
+  if (toggleTrue == true) {
+    toggleTrue = false;
+    searchBanner.classList.remove("active");
+    searchBox.classList.remove("active");
+    searchBoxContainer.classList.remove("active");
+    navContainer.classList.remove("active");
+    searchInput.value = "";
+  }
+
+  clearTimeout(resetTimer2);
+  resetTimer2 = setTimeout(() => {
+    toggleTrue = true;
+  }, 300);
 }
 
 searchBanner.onclick = () => {
-  searchBanner.classList.remove("active");
-  searchBox.classList.remove("active");
-  searchBoxContainer.classList.remove("active");
-  navContainer.classList.remove("active");
-  searchInput.value = "";
+  if (toggleTrue == true) {
+    toggleTrue = false;
+    searchBanner.classList.remove("active");
+    searchBox.classList.remove("active");
+    searchBoxContainer.classList.remove("active");
+    navContainer.classList.remove("active");
+    searchInput.value = "";
+  }
+
+  clearTimeout(resetTimer2);
+  resetTimer2 = setTimeout(() => {
+    toggleTrue = true;
+  }, 300);
 }
 
 mobileMenu.onclick = () => {
-  mobileNav.classList.toggle("active");
-  mobileMenu.classList.toggle("active");
-  navBag.classList.toggle("active");
-  bagViewBox.classList.remove("active");
+  if (toggleTrue == true) {
+    toggleTrue = false;
+
+    mobileNav.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+    navBag.classList.toggle("active");
+    bagViewBox.classList.remove("active");
+  }
+
+  clearTimeout(resetTimer2);  
+  resetTimer2 = setTimeout(() => {
+    toggleTrue = true;
+  }, 500);
 }
 
 navBag.onclick = () => {
-  bagViewBox.classList.toggle("active");
+  if (toggleTrue == true) {
+    toggleTrue = false;
+    bagViewBox.classList.toggle("active");
+  }
+
+  clearTimeout(resetTimer2);
+  resetTimer2 = setTimeout(() => {
+    toggleTrue = true;
+  }, 300);
 }
 
 window.onresize = () => {

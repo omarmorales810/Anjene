@@ -1,6 +1,6 @@
 <?php require_once "./require/header.php"; ?>
 
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <div class="form-wrapper">
     <header class="header">Create Your Account</header>
     <div class="intro-form-text">
@@ -35,6 +35,10 @@
       <div class="submit-btn-field">
         <button class="submit-btn">Sign up</button>
       </div>
+      <div class="gaptcha-container">
+        <div class="g-recaptcha" data-sitekey="6LcN4hsfAAAAAC4LIhMUhYlHT3qqHnhmhsfRFulI" data-type="image"></div>
+        <span class="gaptch-text">Please prove that you are not robot</span>
+      </div>
     </form>
   </div>
 
@@ -48,5 +52,6 @@
   <script src="./js/nav.js"></script>
   <script src="./js/showEye.js"></script>
   <script src="./js/signup.js"></script>
+  <!-- <script src="./js/gaptcha.js"></script> -->
   <!-- <script src="./js/removeTransitionOnResize.js"></script> -->
 <?php require_once "./require/footer.php"; ?>

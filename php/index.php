@@ -16,7 +16,7 @@ if ($rowCount > 0) {
     $product_image = $row["image"];
     $product_price = $row["price"];
     // Truncate product name
-    $product_name = (strlen($product_name) > 30) ? substr($product_name, 0, 59).'...' : $product_name;
+    $product_name = (strlen($product_name) > 40) ? substr($product_name, 0, 60).'...' : $product_name;
   
     $output .= '<div class="tile">
                   <div class="tile-img">

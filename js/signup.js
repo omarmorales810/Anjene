@@ -2,9 +2,16 @@
 const form = document.querySelector('.signup');
 const signUpBtn = document.querySelector('.submit-btn');
 const alertBox = document.querySelector('.alert');
+const text = document.querySelector(".gaptch-text");
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault(); // Preventing form from submitting
+  let response = grecaptcha.getResponse();
+  if(response.length == 0) { 
+    text.style.display = "block";
+    text.classList.add("textActive");
+    e.preventDefault();
+    return false;
+  }
 });
 
 signUpBtn.addEventListener('click', () => {
@@ -18,6 +25,7 @@ signUpBtn.addEventListener('click', () => {
         if (data == 'success') {
           alert("Your account has been created");
           location.href = 'login.php';
+          alertBox.style.display = "none";
         }
         else {
           alertBox.innerHTML = data;

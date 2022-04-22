@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,7 +88,14 @@
         <div class="search-box-icon">
           <svg class="search-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="88" viewBox="0 0 20 88"><rect width="20" height="44" fill="none"/><path d="M13.98,27.343l-3.5-3.5a5.436,5.436,0,1,0-.778.777l3.5,3.5a.55.55,0,1,0,.778-.778ZM1.959,20.418a4.319,4.319,0,1,1,4.319,4.32A4.323,4.323,0,0,1,1.959,20.418Z" fill="gray"/></svg>
         </div>
-        <input type="text" class="search-input" placeholder="Search in Anjene">
+
+        <!-- Search -->
+        <form action="./search.php" class="search-form" method="GET" style="width: 100%; max-width: 700px;">
+          <input type="text" name="header-search" class="search-input" placeholder="Search in Anjene">
+          <button style="visibility: hidden; display: none; opacity: 0; pointer-events: none;"></button>
+        </form>
+
+
         <div class="search-close-icon">
           <svg fill="gray" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 100%;"><g class="style-scope yt-icon"><path d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z" class="style-scope yt-icon"></path></g></svg>
         </div>
