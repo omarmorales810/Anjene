@@ -7,6 +7,21 @@
 
   $search = mysqli_real_escape_string($conn, $_GET['header-search']);
 
+  $output = '<section class="search-page">
+  <div class="search-page-container">
+     <!-- When user search result is 0 -->
+    <div class="no-result-container">
+     <div class="search-result-text">No matches was found.</div>
+     <div class="search-result-text search-result-text-small">Were sorry, we couldnt find any matches for you.</div>
+     <div class="search-page-icon">
+       <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 50%; height: 50%;"><g class="style-scope yt-icon"><path d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z" class="style-scope yt-icon"></path></g></svg>
+     </div>
+    </div>
+  </div>
+</section>';
+
+$quote = '"';
+
 ?>
 
 
@@ -44,7 +59,7 @@
                       </div>
                       <div class="search-item-right">
                         <div class="search-item-description">
-                          <a href="#" class="search-item-name">'.$row["name"].'</a>
+                          <a href="./product.php?product_id=' . $_SESSION["product_id"] . '" class="search-item-name">'.$row["name"].'</a>
                           <p class="search-item-short-description">'.$product_description.'</p>
                         </div>
                         <div class="search-item-links">
@@ -53,9 +68,6 @@
                       </div>
                     </div>';
             }
-          }
-          else {
-            echo "<script>window.location.href='no-result.php'</script>";
           }
         ?>
        </div>
@@ -79,6 +91,22 @@
         $count += 1;
         echo "<script>document.querySelector('.search-item-header').innerHTML = '$count results found'</script>";
       }
+    }
+    else {
+      echo "<script>document.querySelector('.search-page-container').innerHTML = '';</script>";
+
+      echo "<section class='search-page'>
+      <div class='search-page-container'>
+         <!-- When user search result is 0 -->
+        <div class='no-result-container'>
+         <div class='search-result-text'>No matches was found.</div>
+         <div class='search-result-text search-result-text-small'>We're sorry, we couldn't find any matches for ".$quote."".$search."".$quote.".</div>
+         <div class='search-page-icon'>
+           <svg viewBox='0 0 24 24' preserveAspectRatio='xMidYMid meet' focusable='false' class='style-scope yt-icon' style='pointer-events: none; display: block; width: 50%; height: 50%;'><g class='style-scope yt-icon'><path d='M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z' class='style-scope yt-icon'></path></g></svg>
+         </div>
+        </div>
+      </div>
+    </section>";
     }
   ?>
 

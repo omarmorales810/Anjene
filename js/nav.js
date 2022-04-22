@@ -45,6 +45,19 @@ searchClose.onclick = () => {
   }, 300);
 }
 
+navBag.onclick = () => {
+  if (toggleTrue == true) {
+    toggleTrue = false;
+    bagViewBox.classList.toggle("active");
+    searchBanner.classList.toggle("active");
+  }
+
+  clearTimeout(resetTimer2);
+  resetTimer2 = setTimeout(() => {
+    toggleTrue = true;
+  }, 300);
+}
+
 searchBanner.onclick = () => {
   if (toggleTrue == true) {
     toggleTrue = false;
@@ -52,6 +65,7 @@ searchBanner.onclick = () => {
     searchBox.classList.remove("active");
     searchBoxContainer.classList.remove("active");
     navContainer.classList.remove("active");
+    bagViewBox.classList.remove("active");
     searchInput.value = "";
   }
 
@@ -75,18 +89,6 @@ mobileMenu.onclick = () => {
   resetTimer2 = setTimeout(() => {
     toggleTrue = true;
   }, 500);
-}
-
-navBag.onclick = () => {
-  if (toggleTrue == true) {
-    toggleTrue = false;
-    bagViewBox.classList.toggle("active");
-  }
-
-  clearTimeout(resetTimer2);
-  resetTimer2 = setTimeout(() => {
-    toggleTrue = true;
-  }, 300);
 }
 
 window.onresize = () => {
