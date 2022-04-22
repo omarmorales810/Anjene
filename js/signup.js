@@ -5,13 +5,7 @@ const alertBox = document.querySelector('.alert');
 const text = document.querySelector(".gaptch-text");
 
 form.addEventListener('submit', (e) => {
-  let response = grecaptcha.getResponse();
-  if(response.length == 0) { 
-    text.style.display = "block";
-    text.classList.add("textActive");
-    e.preventDefault();
-    return false;
-  }
+  e.preventDefault();
 });
 
 signUpBtn.addEventListener('click', () => {

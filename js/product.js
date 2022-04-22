@@ -3,6 +3,8 @@ const sendReviewBtn = document.querySelector(".send-review");
 const sendReviewInput = document.querySelector(".comment-input");
 const pageProduct = document.querySelector(".page-product");
 
+// Bag quantity counter
+
 
 cancelBtn.onclick = () => {
   if (sendReviewInput.value.length > 0) {

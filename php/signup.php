@@ -12,13 +12,6 @@ function generateRandomString($length = 25) {
   return $randomString;
 }
 
-if(isset($_POST['g-recaptcha-response'])){
-  $captcha=$_POST['g-recaptcha-response'];
-  $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=__1234__&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
-
-  echo $response;
-}
-
 $myRandomString = generateRandomString(13);
 $first_name = mysqli_real_escape_string($conn, $_POST["first-name"]);
 $surname = mysqli_real_escape_string($conn, $_POST["surname"]);
@@ -48,15 +41,9 @@ if (empty($first_name) || empty($surname) || empty($email_address) || empty($pas
     }
     else {
       $sql = "INSERT INTO user(unique_id, first_name, surname, email_address, password) VALUES('{$myRandomString}', '{$first_name}', '{$surname}', '{$email_address}', '{$password}')";
-      $g_response = json_decode($response);
 
-      if ($g_response->success === true) {
-        $result = mysqli_query($conn, $sql);
-        echo "success";
-      }
-      else {
-        echo "Something went wrong";
-      }
+      $result = mysqli_query($conn, $sql);
+      echo "success";
     }
   }
 

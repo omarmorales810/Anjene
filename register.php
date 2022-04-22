@@ -35,10 +35,10 @@
       <div class="submit-btn-field">
         <button class="submit-btn">Sign up</button>
       </div>
-      <div class="gaptcha-container">
+      <!-- <div class="gaptcha-container">
         <div class="g-recaptcha" data-sitekey="6LcN4hsfAAAAAC4LIhMUhYlHT3qqHnhmhsfRFulI" data-type="image"></div>
         <span class="gaptch-text">Please prove that you are not robot</span>
-      </div>
+      </div> -->
     </form>
   </div>
 
