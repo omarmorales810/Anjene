@@ -13,6 +13,7 @@
     $product_name = $row["name"];
     $product_image = $row["image"];
     $product_price = $row["price"];
+    $product_quantity = $row["quantity"];
     $product_description = $row["description"];
 
   }
@@ -62,7 +63,7 @@
             <button class="quantity-btn-decrement quantity-btn">
               <svg style="width: 12px; height: 20px" fill="#707070" enable-background="new 0 0 10 10" viewBox="0 0 10 10" x="0" y="0" class="shopee-svg-icon"><polygon points="4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5"></polygon></svg>
             </button>
-            <div class="stocks">70 pieces left</div>
+            <div class="stocks"><?php echo $product_quantity ?> pieces left</div>
           </div>
         </div>
         <div class="page-product-link">
@@ -82,7 +83,7 @@
   </div>
   <div class="product-review-section">
     <div class="product-review-section-container">
-      <header>Product reviews</header>
+      <header>Product comments</header>
       <div class="reviews">
         <div class="profile">
           <img src="./img/blank-profile.jpeg" alt="">
@@ -143,7 +144,7 @@
           </div>
           <div class="send-review-btn-container">
             <button class="cancel-review">Cancel</button>
-            <button class="send-review">Review</button>
+            <button class="send-review">Comment</button>
           </div>
         </div>
       </div>

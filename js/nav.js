@@ -9,6 +9,7 @@ const body = document.querySelector(".body");
 const mobileNav = document.querySelector(".mobile-nav");
 const mobileMenu = document.querySelector(".burger-container");
 const navBag = document.querySelector(".bag");
+const bagViewBox = document.querySelector(".bag-view-content");
 
 search.onclick = () => {
    searchBanner.classList.toggle("active");
@@ -37,6 +38,11 @@ mobileMenu.onclick = () => {
   mobileNav.classList.toggle("active");
   mobileMenu.classList.toggle("active");
   navBag.classList.toggle("active");
+  bagViewBox.classList.remove("active");
+}
+
+navBag.onclick = () => {
+  bagViewBox.classList.toggle("active");
 }
 
 window.onresize = () => {

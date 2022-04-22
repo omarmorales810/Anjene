@@ -258,6 +258,7 @@ img {
 }
 
 .bag {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,6 +267,96 @@ img {
   width: 100%;
   transition: opacity 500ms ease;
 }
+
+.bag-view-content {
+  position: absolute;
+  background: #fff;
+  width: 300px;
+  right: -30px;
+  top: 60px;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  list-style-type: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+  /* box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.bag-view-content.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.bag-added-item-container {
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bag-view-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;  
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bag-view-item {
+  padding: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.bag-view-link {
+  font-size: 16px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.bag-view-link:hover {
+  text-decoration: underline;
+}
+
+/* Triangle */
+
+.triangle-container {
+  position: absolute;
+  top: -15px;
+  right: 30px;
+  transform: rotate(90deg);
+  background-color: #fff;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid rgba(0, 0, 0, 0.2);
+}
+
+.inner-triangle {
+  position: relative;
+  top: -11px;
+  left: 1px;
+  width: 0;
+  height: 0;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-right: 11px solid #fff;
+}
+
 
 .search {
   width: 100%;
@@ -420,8 +511,20 @@ img {
     position: relative;
     z-index: 999;
     height: 50px;
-    width: 50px;
+    width: 60px;
   }
+
+  .bag-view-content {
+    position: absolute;
+    right: 5px;
+  }
+
+  .triangle-container {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+  }
+  
 
   .mobile-nav {
     display: flex;
@@ -640,9 +743,13 @@ img {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
   .mobile-nav-search-input {
     font-size: 0.9rem;
+  }
+
+  .bag-view-content {
+    width: 250px;
   }
 }
 
@@ -685,6 +792,7 @@ img {
   height: 100%;
   width: 910px;
   position: relative;
+  left: 0.8rem;
 }
 
 .products-header-item span {
@@ -787,6 +895,11 @@ img {
 
   .tiles {
     width: 600px;
+  }
+
+  .products-header-item {
+    position: relative;
+    left: 0;
   }
 }
 
@@ -1525,6 +1638,7 @@ img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 30px;
   }
 
   .product-buy {
