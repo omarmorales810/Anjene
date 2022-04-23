@@ -1872,6 +1872,7 @@ input[type=number] {
   font-weight: 500;
   text-decoration: none;
   color: #1d1d1f;
+  transition: color 200ms ease;
 }
 
 .search-item-name:hover {
@@ -1959,6 +1960,7 @@ input[type=number] {
   align-items: center;
   flex-direction: column;
   padding-top: 125px;
+  padding-bottom: 20px;
 }
 
 .bag-page-header-header {
@@ -2011,6 +2013,10 @@ input[type=number] {
 
 .bag-page-table-item:first-child {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bag-page-table-item:last-child {
+  border-bottom: none;
 }
 
 
