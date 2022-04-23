@@ -1965,7 +1965,7 @@ input[type=number] {
   width: 910px;
   font-size: 35px;
   margin-bottom: 3rem;
-  font-weight: 500;
+  font-weight: 400;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -2319,7 +2319,9 @@ input[type=number] {
   .bag-page-table-item:last-child {
     border-bottom: none;
   }
+}
 
+@media screen and (max-width: 300px) {
   .bag-page-header-header {
     font-size: 30px;
     margin-bottom: 3rem;
@@ -2336,10 +2338,6 @@ input[type=number] {
     position: absolute;
     left: 190px;
   }
-}
-
-@media screen and (max-width: 350px) {
-  
 }
 
 
