@@ -43,32 +43,34 @@
         </div> -->
       </div>
       <div class="page-product-right">
-        <div class="page-product-description">
-          <div class="page-product-name"><?php echo $product_name ?></div>
-          <span class="page-product-price"><span style="font-size: 1.2rem;">₱</span><?php echo number_format( $product_price, 2, '.', ', ' ) ?></span>
-        </div>
-        <div class="shipping-fee-container">
-          <div class="shipping-fee-description">Shipping fee</div>
-          <div class="shpping-fee"><span style="font-size: 0.9rem;">₱</span>70.00</div>
-          <div class="shipping-fee-svg">
+        <div class="product-right-content">
+          <div class="page-product-description">
+            <div class="page-product-name"><?php echo $product_name ?></div>
+            <span class="page-product-price"><span style="font-size: 1.2rem;">₱</span><?php echo number_format( $product_price, 2, '.', ', ' ) ?></span>
           </div>
-        </div>
-        <div class="quantity">
-          <div class="quantity-text">Select quantity</div>
-          <div class="quantity-btn-container">
-            <button class="quantity-btn-increment quantity-btn">
-              <svg style="width: 12px; height: 20px" fill="#707070" enable-background="new 0 0 10 10" viewBox="0 0 10 10" x="0" y="0" class="shopee-svg-icon icon-plus-sign"><polygon points="10 4.5 5.5 4.5 5.5 0 4.5 0 4.5 4.5 0 4.5 0 5.5 4.5 5.5 4.5 10 5.5 10 5.5 5.5 10 5.5"></polygon></svg>
-            </button>
-            <input type="text" class="quantity-input" value="0">
-            <button class="quantity-btn-decrement quantity-btn">
-              <svg style="width: 12px; height: 20px" fill="#707070" enable-background="new 0 0 10 10" viewBox="0 0 10 10" x="0" y="0" class="shopee-svg-icon"><polygon points="4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5"></polygon></svg>
-            </button>
-            <div class="stocks"><?php echo $product_quantity ?> pieces left</div>
+          <div class="shipping-fee-container">
+            <div class="shipping-fee-description">Shipping fee</div>
+            <div class="shpping-fee"><span style="font-size: 0.9rem;">₱</span>70.00</div>
+            <div class="shipping-fee-svg">
+            </div>
           </div>
-        </div>
-        <div class="page-product-link">
-          <span class="add-to-cart-link">Add to bag <i class="fas fa-chevron-right"></i></span>
-          <span class="buy-now-link">Buy now <i class="fas fa-chevron-right"></i></span>
+          <div class="quantity">
+            <div class="quantity-text">Select quantity</div>
+            <div class="quantity-btn-container">
+              <button class="quantity-btn-increment quantity-btn">
+                <svg style="width: 12px; height: 20px" fill="#707070" enable-background="new 0 0 10 10" viewBox="0 0 10 10" x="0" y="0" class="shopee-svg-icon icon-plus-sign"><polygon points="10 4.5 5.5 4.5 5.5 0 4.5 0 4.5 4.5 0 4.5 0 5.5 4.5 5.5 4.5 10 5.5 10 5.5 5.5 10 5.5"></polygon></svg>
+              </button>
+              <input type="number" class="quantity-input">
+              <button class="quantity-btn-decrement quantity-btn">
+                <svg style="width: 12px; height: 20px" fill="#707070" enable-background="new 0 0 10 10" viewBox="0 0 10 10" x="0" y="0" class="shopee-svg-icon"><polygon points="4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5"></polygon></svg>
+              </button>
+              <div class="stocks"><?php echo $product_quantity ?> pieces left</div>
+            </div>
+          </div>
+          <div class="page-product-link">
+            <span class="add-to-cart-link">Add to bag <i class="fas fa-chevron-right"></i></span>
+            <span class="buy-now-link">Buy now <i class="fas fa-chevron-right"></i></span>
+          </div>
         </div>
       </div>
     </div>
@@ -76,9 +78,11 @@
   <div class="product-description-section">
     <div class="product-description-section-container">
       <header>Product description</header>
-      <p class="product-description-section-text">
-        <?php echo $product_description ?>
-      </p>
+      <div class="product-description-text-container">
+        <p class="product-description-section-text">
+          <?php echo $product_description ?>
+        </p>
+      </div>
     </div>
   </div>
   <div class="product-review-section">
@@ -154,6 +158,7 @@
   <!-- Javascript -->
   <script src="./js/nav.js"></script>
   <script src="./js/product.js"></script>
+  <script src="./js/quantityCounter.js"></script>
   <script src="./js/removeTransitionOnResize.js"></script>
 
 <?php require_once "./require/footer.php" ?>

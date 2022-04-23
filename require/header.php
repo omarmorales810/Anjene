@@ -60,7 +60,7 @@
           <div class="bag-added-item-container">Your bag is empty</div>
           <ul class="bag-view-container">
             <li class="bag-view-item">
-              <a href="" class="bag-view-link">Bag</a>
+              <a href="./bag.php" class="bag-view-link">Bag</a>
             </li>
             <li class="bag-view-item">
               <a href="" class="bag-view-link">Orders</a>

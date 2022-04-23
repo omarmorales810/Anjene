@@ -788,6 +788,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 10px 0;
+  font-weight: 500;
 }
 
 .products-header-item {
@@ -806,6 +807,7 @@ img {
 
 .header-item2 {
   color: #707070;
+  font-weight: 400;
 }
 
 .header-item3 {
@@ -870,11 +872,14 @@ img {
 }
 
 .tile-description .product-name {
+  margin-top: 1rem;
   text-align: center;
   font-size: 1rem;
+  font-weight: 500;
   text-decoration: none;
   color: #1d1d1f;
   transition: color 200ms ease;
+  text-transform: capitalize;
 }
 
 .product-name:hover {
@@ -886,7 +891,7 @@ img {
   font-size: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
   color: #1d1d1f;
 }
@@ -1187,6 +1192,7 @@ img {
 
 .page-product {
   margin-top: 100px;
+  margin-bottom: 30px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1198,15 +1204,19 @@ img {
 .page-product-container {
   max-width: 910px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: row;
-  gap: 4rem;
-  margin-bottom: 50px;
+  gap: 3rem;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .page-product-img img {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   object-fit: contain;
+  /* position: absolute; */
 }
 
 .page-product-description {
@@ -1217,24 +1227,27 @@ img {
 }
 
 .page-product-name {
-  font-size: 33px;
+  font-size: 27px;
   font-weight: 500;
   color: #1d1d1f;
+  text-transform: capitalize;
 }
 
 .page-product-price {
   margin-top: 0.7rem;
-  font-size: 25px;
+  font-size: 20px;
   color: #1d1d1f;
 }
 
 
 .page-product-left {
-  /* padding-bottom: 1rem;
-  width: 60%; */
+  padding-bottom: 1rem;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
 }
 
+.page-product-right {
+  width: 100%;
+}
 
 .product-buy {
   margin-top: 30px;
@@ -1289,6 +1302,18 @@ img {
   margin-top: 1rem;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .quantity-btn-container {
   display: flex;
   flex-direction: row;
@@ -1330,6 +1355,7 @@ img {
   font-size: 1rem;
   color: #505050;
   text-align: center;
+  pointer-events: none;
 }
 
 .stocks {
@@ -1413,17 +1439,20 @@ img {
 }
 
 .product-description-section-container header {
-  font-size: 17px;
+  font-size: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 0.7rem;
   font-weight: 400;
   text-align: start;
-  margin-bottom: 0.7rem;
 }
 
 .product-description-section-text {
   font-size: 14px;
   line-height: 20px;
+  white-space: pre-line;
+  color: #1d1d1f;
+  position: relative;
+  bottom: 0.5rem;
 }
 
 
@@ -1452,7 +1481,7 @@ img {
 }
 
 .product-review-section-container header {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 0rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -1612,8 +1641,8 @@ img {
 
 @media screen and (max-width: 950px) {
   .page-product-img img {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
   }  
 
   .page-product-left {
@@ -1631,6 +1660,13 @@ img {
   .page-product-name {
     font-size: 30px;
   }
+}
+
+@media screen and (max-width: 790px) {
+  .page-product-img img {
+    width: 200px;
+    height: 200px;
+  }  
 }
 
 @media screen and (max-width: 700px) {
@@ -1802,7 +1838,7 @@ img {
 }
 
 .search-item .search-item-header {
-  font-size: 21px;
+  font-size: 18px;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0 ,0.1);
   width: 100%;
@@ -1832,11 +1868,10 @@ img {
 }
 
 .search-item-name {
-  font-size: 21px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: 500;
   text-decoration: none;
   color: #1d1d1f;
-  transition: color 200ms ease;
 }
 
 .search-item-name:hover {
@@ -1850,7 +1885,7 @@ img {
 }
 
 .search-item-short-description {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: #1d1d1f;
 }
@@ -1861,7 +1896,7 @@ img {
 }
 
 .search-item-link {
-  font-size: 17px;
+  font-size: 15px;
   color: #0066cc;
   font-weight: 400;
   cursor: pointer;
@@ -1869,7 +1904,7 @@ img {
 }
 
 .search-item-link i {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .search-item-link:hover {
