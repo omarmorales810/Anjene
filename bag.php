@@ -1,8 +1,9 @@
 <?php require_once "./require/header.php" ?>
 
   <section class="bag-page">
+    <header class="bag-page-header-header">Shopping Bag</header>
     <div class="bag-page-container">
-      <header class="bag-page-header">(2) Item</header>
+      <div class="bag-page-header">(2) Item</div>
       <div class="bag-page-table">
 
         <div class="bag-page-table-item">
