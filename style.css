@@ -1953,11 +1953,11 @@ input[type=number] {
 /* --------------------------- Bag Page --------------------------- */
 
 .bag-page {
-  padding: 100px 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 100px;
 }
 
 .bag-page-container {
@@ -1965,117 +1965,314 @@ input[type=number] {
 }
 
 .bag-page-header {
-  font-size: 25px;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  text-align: end;
 }
 
 .bag-page-table {
-  padding: 20px 10px;
+  width: 100%;
 }
 
 .bag-page-table-item {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
   padding: 1.5rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 20px;
+  padding-left: 10px;
 }
 
 .bag-page-table-item:first-child {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.bag-page-table-item:last-child {
-  border-bottom: none;
+
+
+.bag-page-table-item-img-container img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
 }
 
 .bag-page-table-item-product {
   display: flex;
-  align-items: center;
-  margin-right: 100px;
-}
-
-.bag-page-table-item-product img {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
+  gap: 80px;
 }
 
 .bag-page-table-product-content {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
+  top: 7px;
 }
 
 .bag-page-table-item-name {
   font-weight: 500;
   font-size: 17px;
   color: #1d1d1f;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 200px;
 }
 
 .bag-page-item-price span {
-  color: #1d1d1f;
+  color: #1d1d1f !important;
+  font-size: 0.95rem !important;
 }
 
-
 .bag-page-table-item-quantity {
-  position: relative;
-  top: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 0.5rem;
-  margin-right: 50px;
+  position: relative;
+  top: 2px;
 }
 
-.quantity-text {
+.bag-quantity-text {
   color: #707070;
   font-size: 14px;
 }
-
 
 .bag-page-table-item-total-price {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 170px;
-  position: relative;
-  top: 0.8rem;
-  gap: 0.9rem;
-  margin-right: 50px;
+  width: 100%;
 }
 
 .item-total-price {
-  font-size: 1.1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100px;
+  text-align: center;
 }
 
 .total-price-text {
   color: #707070;
   font-size: 14px;
+  position: relative;
+  bottom: -14px;
 }
 
 .item-remove-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   border: none;
   color: red;
   font-size: 1.05rem;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
   position: relative;
-  top: -3px;
+  top: 11px;
 }
 
 .item-remove-btn:hover {
   text-decoration: underline;
 }
 
-.fa-ban {
-  font-size: 0.8rem;
+@media screen and (max-width: 950px) {
+  .bag-page-container {
+    width: 800px;
+  }
+
+  .bag-page-table-item-product {
+    display: flex;
+    gap: 50px;
+  }
+
+  .bag-page-table-item-name {
+    font-weight: 500;
+    font-size: 17px;
+    color: #1d1d1f;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 170px;
+  }
 }
+
+@media screen and (max-width: 840px) {
+  .bag-page-container {
+    width: 700px;
+  }
+
+  .bag-page-table-item-product {
+    display: flex;
+    gap: 20px;
+  }
+
+  .bag-page-table-item-name {
+    font-weight: 500;
+    font-size: 17px;
+    color: #1d1d1f;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 170px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .bag-page-container {
+    width: 650px;
+  }
+
+  .bag-page-table-item-product {
+    display: flex;
+    gap: 20px;
+  }
+
+  .bag-page-table-item-name {
+    font-weight: 500;
+    font-size: 17px;
+    color: #1d1d1f;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .bag-page-container {
+    width: 530px;
+  }
+
+  .bag-page-table-item-img-container img {
+    width: 80px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .bag-page-table-item-product {
+    display: flex;
+    gap: 20px;
+  }
+
+  .bag-page-table-item-name {
+    font-weight: 500;
+    font-size: 17px;
+    color: #1d1d1f;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .bag-page-container {
+    width: 100%;
+  }
+
+  .bag-page-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: none;
+  }
+
+  .bag-page-table-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 20px 20px;
+  }
+
+  .bag-page-table-item-img-container img {
+    width: 100%;
+    height: 100%;
+    max-height: 150px;
+    max-width: 150px;
+    object-fit: contain;
+  }
+
+  .bag-page-table-item-product {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .bag-page-table-product-content {
+    position: relative;
+    top: 0px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  .bag-page-table-item-name {
+    font-weight: 500;
+    font-size: 17px;
+    color: #1d1d1f;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+    overflow: unset;
+    width: 100%;
+  }
+
+  .bag-page-table-item-total-price {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bag-page-table-item-quantity {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    top: 0px;
+  }
+
+  .item-total-price {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-align: start;
+  }  
+
+  .total-price-text {
+    position: relative;
+    top: 0.4rem;
+  }
+
+  .bag-page-table-item-remove {
+    /* width: 100%; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-remove-btn {
+    position: relative;
+    top: 0px;
+  }
+
+  .bag-page-table-item:last-child {
+    border-bottom: none;
+  }
+}
+
+
 
 
 
