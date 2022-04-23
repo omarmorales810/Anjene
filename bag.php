@@ -2,7 +2,7 @@
 
   <section class="bag-page">
     <div class="bag-page-container">
-      <header class="bag-page-header">You have 2 item your in bag</header>
+      <header class="bag-page-header">(2) Item</header>
       <div class="bag-page-table">
 
         <div class="bag-page-table-item">
@@ -95,5 +95,8 @@
     </div>
   </div> -->
 
+  <script src="./js/nav.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/removeTransitionOnResize.js"></script>
 
 <?php require_once "./require/footer.php" ?>

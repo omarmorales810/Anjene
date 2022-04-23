@@ -1838,7 +1838,7 @@ input[type=number] {
 }
 
 .search-item .search-item-header {
-  font-size: 18px;
+  font-size: 20px;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0 ,0.1);
   width: 100%;
@@ -1885,7 +1885,7 @@ input[type=number] {
 }
 
 .search-item-short-description {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: #1d1d1f;
 }
@@ -1896,7 +1896,7 @@ input[type=number] {
 }
 
 .search-item-link {
-  font-size: 15px;
+  font-size: 16px;
   color: #0066cc;
   font-weight: 400;
   cursor: pointer;
@@ -1904,7 +1904,7 @@ input[type=number] {
 }
 
 .search-item-link i {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .search-item-link:hover {
@@ -1969,6 +1969,7 @@ input[type=number] {
   font-size: 20px;
   margin-bottom: 1rem;
   text-align: end;
+  padding-right: 1rem;
 }
 
 .bag-page-table {
