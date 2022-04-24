@@ -27,7 +27,7 @@
           $product_price = $row["price"];
           $product_name = (strlen($product_name) > 40) ? substr($product_name, 0, 60).'...' : $product_name;
           $count += 1;
-          echo '<div class="tile">
+          echo '<div class="tile category-tile">
                       <div class="tile-img">
                         <img src="../img/'.$product_image.'" alt="Home page product image">
                       </div>

@@ -629,7 +629,7 @@ img {
     position: relative;
     display: inline-block;
     height: 50px;
-    width: 50px;
+    width: 60px;
     cursor: pointer;
     z-index: 999;
     -webkit-transform: rotate(0deg);
@@ -839,6 +839,7 @@ img {
   gap: 1rem;
   width: 910px;
   padding: 20px 0;
+  padding-bottom: 10px;
 }
 
 .tile {
@@ -846,6 +847,11 @@ img {
   border-radius: 0px;
   position: relative;
   z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1rem;
   /* transition: all 200ms ease; */
 }
 
@@ -869,7 +875,7 @@ img {
   align-items: center;
   /* justify-content: space-between; */
   flex-direction: column;
-  min-height: 90px;
+  /* min-height: 90px; */
 }
 
 .tile-description .product-name {
@@ -934,12 +940,12 @@ img {
   }
 
   .tile {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     width: 90%;
   }
 
-  .tile:last-child {
-    border-bottom: none;
+  .tile:first-child {
+    border-top: none !important;
   }
 }
 
@@ -2041,10 +2047,9 @@ input[type=number] {
 .bag-page-header {
   width: 100%;
   font-size: 20px;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
   text-align: end;
-  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
 }
 
 .bag-page-table {
@@ -2056,21 +2061,13 @@ input[type=number] {
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  margin-bottom: 1rem;
   padding: 1.5rem 0;
-  /* border: 1px solid rgba(0, 0, 0, 0.1); */
-  padding: 20px 25px;
+  padding: 15px 25px;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
 }
-
-.bag-page-table-item:first-child {
-  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
-}
-
-.bag-page-table-item:last-child {
-  /* border-bottom: none; */
-}
-
-
 
 .bag-page-table-item-img-container img {
   width: 120px;
@@ -2161,6 +2158,38 @@ input[type=number] {
   text-decoration: underline;
 }
 
+.check-out-and-remove-all-btn-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  gap: 1rem;
+}
+
+.checkout-btn {
+  padding: 20px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #0070c9;
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+}
+
+.total-item-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: #1d1d1f;
+  width: 100%;
+}
+
 @media screen and (max-width: 950px) {
   .bag-page-container {
     width: 800px;
@@ -2238,42 +2267,6 @@ input[type=number] {
 
 @media screen and (max-width: 680px) {
   .bag-page-container {
-    width: 530px;
-  }
-
-  .bag-page-header-header {
-    width: 530px;
-  }
-
-  .bag-page-table-item-img-container img {
-    width: 80px;
-    height: 100px;
-    object-fit: contain;
-  }
-
-  .bag-page-table-item-product {
-    display: flex;
-    gap: 20px;
-  }
-
-  .bag-page-table-item-name {
-    font-weight: 500;
-    font-size: 17px;
-    color: #1d1d1f;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 60px;
-  }
-
-  .bag-page-table-item {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media screen and (max-width: 560px) {
-  .bag-page-container {
     width: 100%;
   }
 
@@ -2302,14 +2295,14 @@ input[type=number] {
   .bag-page-table-item {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: row;
-    width: 95%;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
     padding: 30px 20px;
-    gap: 3rem;
+    gap: 2rem;
     padding-left: 3rem;
     position: relative;
-    box-shadow: none;
+    /* box-shadow: none; */
   }
 
   .bag-page-table-item-img-container img {
@@ -2377,7 +2370,6 @@ input[type=number] {
   }
 
   .bag-page-table-item-remove {
-    /* width: 100%; */
     display: flex;
     width: 100%;
     justify-content: flex-start;
@@ -2389,10 +2381,6 @@ input[type=number] {
     top: 0px;
   }
 
-  /* .bag-page-table-item:last-child {
-    border-bottom: none;
-  } */
-
   .bag-page-header-header {
     font-size: 30px;
   }
@@ -2402,6 +2390,11 @@ input[type=number] {
     width: 70px;
     position: absolute;
     left: 190px;
+  }
+
+  .check-out-and-remove-all-btn-container {
+    padding: 0 10px;
+    margin-bottom: 1.5rem;
   }
 }
 
