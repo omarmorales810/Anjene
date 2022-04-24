@@ -15,7 +15,6 @@
     $product_price = $row["price"];
     $product_quantity = $row["quantity"];
     $product_description = $row["description"];
-
   }
 
 ?>
@@ -143,7 +142,7 @@
         </div>
         <div class="type-comment-box">
           <div class="send-review-input-container">
-            <input placeholder="Add your reviews or suggestions" type="text" class="comment-input">
+            <input placeholder="Add your comments or suggestions" type="text" class="comment-input">
             <div class="comment-input-border-bottom"></div>
           </div>
           <div class="send-review-btn-container">

@@ -75,12 +75,7 @@ $quote = '"';
    </div>
  </section>
 
-
-
-  <!-- Javascript -->
-  <script src="./js/nav.js"></script>
-  <script src="./js/removeTransitionOnResize.js"></script>
-  <?php 
+ <?php 
     $sql = "SELECT * FROM product WHERE name LIKE '%{$search}%'";
     $result = mysqli_query($conn, $sql);
     $rowCount = mysqli_num_rows($result);
@@ -110,6 +105,11 @@ $quote = '"';
     }
   ?>
 
+
+
+  <!-- Javascript -->
+  <script src="./js/nav.js"></script>
+  <script src="./js/removeTransitionOnResize.js"></script>
 <?php require_once "./require/footer.php" ?>
 
 
