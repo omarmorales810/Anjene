@@ -2066,7 +2066,7 @@ input[type=number] {
   margin-bottom: 1.5rem;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.10);
 }
 
 .bag-page-table-item-img-container img {
@@ -2159,7 +2159,7 @@ input[type=number] {
 }
 
 .check-out-and-remove-all-btn-container {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -2182,7 +2182,7 @@ input[type=number] {
 
 .total-item-price {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 1rem;
   font-size: 1.1rem;
@@ -2392,9 +2392,26 @@ input[type=number] {
     left: 190px;
   }
 
+  .bag-page-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bag-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .check-out-and-remove-all-btn-container {
-    padding: 0 10px;
-    margin-bottom: 1.5rem;
+    padding: 0 0px;
+    margin-bottom: 2rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
