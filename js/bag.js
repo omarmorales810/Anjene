@@ -26,7 +26,7 @@ const updateCartTotal = () => {
         let itemQuantityPrice = itemRow.getElementsByClassName('item-total-price')[0];
         let price = parseFloat(itemPrice.innerText.replace('₱',''));
         let qty = quantityInput.value;
-        itemQuantityPrice.innerText = `₱${parseFloat(price * qty)}`;
+        
         
         total = total + (price * qty);
     }

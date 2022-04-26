@@ -81,7 +81,7 @@ function ready(){
             total = total + (price * qty);
         }
     
-        document.getElementsByClassName('total-item-price')[0].innerText = `₱${total}`;
+        document.getElementsByClassName('total-item-price')[0].innerText = `Total ₱${total}`;
         console.log(total);
     };
     
