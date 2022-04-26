@@ -109,5 +109,6 @@
   <script src="./js/removeTransitionOnResize.js"></script>
   <script src="./js/bag.js"></script>
   <script src="./js/qcBag.js"></script>
+  <script src="./js/addToCart.js"></script>
 
 <?php require_once "./require/footer.php" ?>

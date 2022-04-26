@@ -24,7 +24,7 @@
     <div class="page-product-container">
       <div class="page-product-left">
         <div class="page-product-img">
-          <img src="./img/<?php echo $product_image ?>" alt="">
+          <img class="page-product-img-url" src="./img/<?php echo $product_image ?>" alt="">
         </div>
         <!-- <div class="product-buy">
           <div class="product-buy-column">
@@ -159,6 +159,8 @@
   <script src="./js/product.js"></script>
   <!-- <script src="./js/quantityCounter.js"></script> -->
   <script src="./js/removeTransitionOnResize.js"></script>
+  <script src="./js/addToCart.js"></script>
+
   
   <!-- Product quantity counter -->
   <?php 
