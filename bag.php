@@ -93,7 +93,7 @@
       </div>
       <div class="check-out-and-remove-all-btn-container">
         <!-- <button class="remove-all-btn">Remove All</button> -->
-        <span class="total-item-price">Total ( ₱45, 000.00 )</span>
+        <span class="total-item-price"></span>
         <button class="checkout-btn">Checkout</button>
       </div>
     </div>

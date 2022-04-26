@@ -21,14 +21,21 @@ const updateCartTotal = () => {
     for (i = 0; i < itemRows.length; i++){
         let itemRow = itemRows[i];
         let itemPrice = itemRow.getElementsByClassName('bag-page-item-price')[0];
+        console.log(itemPrice);
         let quantityInput = itemRow.getElementsByClassName('quantity-input')[0];
+        let itemQuantityPrice = itemRow.getElementsByClassName('item-total-price')[0];
         let price = parseFloat(itemPrice.innerText.replace('₱',''));
         let qty = quantityInput.value;
+        itemQuantityPrice.innerText = `₱${parseFloat(price * qty)}`;
+        
         total = total + (price * qty);
     }
-    document.getElementsByClassName('total-item-price')[0].innerText = `₱${total}`;
+
+    document.getElementsByClassName('total-item-price')[0].innerText = `Total ₱${total}`;
     console.log(total);
 };
+
+
 
 const removeBagItem = (e) => {
     let buttonClicked = e.target;
