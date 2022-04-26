@@ -13,12 +13,6 @@ function ready() {
     }
 }
 
-const removeBagItem = (e) => {
-    let buttonClicked = e.target;
-    buttonClicked.parentElement.parentElement.parentElement.remove();
-    updateCartTotal();
-}
-
 const updateCartTotal = () => {
     let itemContainer = document.getElementsByClassName('bag-page-table')[0];
     let itemRows = document.getElementsByClassName('bag-page-table-item');
@@ -30,7 +24,14 @@ const updateCartTotal = () => {
         let quantityInput = itemRow.getElementsByClassName('quantity-input')[0];
         let price = parseFloat(itemPrice.innerText.replace('₱',''));
         let qty = quantityInput.value;
-        total = total + (price * 0);
+        total = total + (price * qty);
     }
     document.getElementsByClassName('total-item-price')[0].innerText = `₱${total}`;
+    console.log(total);
 };
+
+const removeBagItem = (e) => {
+    let buttonClicked = e.target;
+    buttonClicked.parentElement.parentElement.parentElement.remove();
+    updateCartTotal();
+}
