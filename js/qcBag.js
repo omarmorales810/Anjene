@@ -5,7 +5,6 @@ if (document.readyState == "loading"){
 }
     
 function ready(){
-    console.log('ready');
     const initiliazeCount = () => {
         const countItems = [];
         const itemsWrapper = document.getElementById('bag-page-table');
