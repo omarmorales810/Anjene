@@ -63,7 +63,7 @@ function ready(){
     mainF();
 
     function updatePriceTotal () {
-        console.log('gumagana function');
+        
         let itemContainer = document.getElementsByClassName('bag-page-table')[0];
         let itemRows = document.getElementsByClassName('bag-page-table-item');
         let total = 0;
@@ -71,7 +71,6 @@ function ready(){
         for (i = 0; i < itemRows.length; i++){
             let itemRow = itemRows[i];
             let itemPrice = itemRow.getElementsByClassName('bag-page-item-price')[0];
-            console.log(itemPrice);
             let quantityInput = itemRow.getElementsByClassName('quantity-input')[0];
             let itemQuantityPrice = itemRow.getElementsByClassName('item-total-price')[0];
             let price = parseFloat(itemPrice.innerText.replace('₱',''));
@@ -82,7 +81,24 @@ function ready(){
         }
     
         document.getElementsByClassName('total-item-price')[0].innerText = `Total ₱${total}`;
-        console.log(total);
     };
-    
+
+    function qtyChanged () {
+        let quantityInput = document.getElementsByClassName("quantity-input");
+        for (let i=0; i < quantityInput.length; i++){
+            let qty = quantityInput[i];
+            qty.addEventListener('change', (e) => {
+                qty.value = parseInt(e.target.value);
+                console.log(typeof(qty.value));
+                if (isNaN(qty.value) || qty.value <= 0) {
+                    qty.value = 1;
+                } else{
+                    console.log('valid');
+                }
+                updatePriceTotal();
+            })
+
+        }
+    }
+    qtyChanged();
 }
