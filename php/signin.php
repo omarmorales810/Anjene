@@ -14,7 +14,12 @@ else {
   $rowCount = mysqli_num_rows($result);
 
   if ($rowCount > 0) {
-    echo "success";
+    while($row = mysqli_fetch_assoc($result)) {
+      session_start();
+      $_SESSION["isLoggedIn"] = true;
+      $_SESSION["user"] = $row["unique_id"];
+      echo "success";
+    } 
   }
   else {
     echo "Invalid login, please try again";

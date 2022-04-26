@@ -1362,7 +1362,7 @@ input[type=number] {
   font-size: 1rem;
   color: #505050;
   text-align: center;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .stocks {

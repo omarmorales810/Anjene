@@ -159,5 +159,36 @@
   <script src="./js/product.js"></script>
   <script src="./js/quantityCounter.js"></script>
   <script src="./js/removeTransitionOnResize.js"></script>
+  
+  <!-- Product quantity counter -->
+  <?php 
+    echo '<script>
+            const incrementBtn = document.querySelector(".quantity-btn-increment");
+            const decrementBtn = document.querySelector(".quantity-btn-decrement");
+            const numberInput = document.querySelector(".quantity-input");
+
+            let count = 0;
+
+            incrementBtn.onclick = () => {
+              if (numberInput.value < '.$product_quantity.') {
+                count += 1;
+                numberInput.value = count;
+              }
+            }
+
+            decrement.onclick = () => {
+              if (count > 0) {
+                count -= 1;
+              }
+              numberInput.value = count;
+            }
+
+            numberInput.oninput = () => {
+              if (numberInput.value > '.$product_quantity.') {
+                numberInput.value = '.$product_quantity.';
+              }
+            }
+          </script>';
+  ?>
 
 <?php require_once "./require/footer.php" ?>
