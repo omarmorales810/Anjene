@@ -79,7 +79,8 @@ function ready(){
             
             total = total + (price * qty);
         }
-    
+        
+        total = Math.round(total * 100) / 100;
         document.getElementsByClassName('total-item-price')[0].innerText = `Total ₱${total}`;
     };
 
