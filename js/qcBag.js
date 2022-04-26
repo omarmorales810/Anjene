@@ -74,7 +74,7 @@ function ready(){
             let quantityInput = itemRow.getElementsByClassName('quantity-input')[0];
             let itemQuantityPrice = itemRow.getElementsByClassName('item-total-price')[0];
             let price = parseFloat(itemPrice.innerText.replace('₱',''));
-            let qty = quantityInput.value;
+            var qty = quantityInput.value;
             itemQuantityPrice.innerText =  `₱${parseFloat(price * qty)}`;
             
             total = total + (price * qty);
@@ -86,15 +86,14 @@ function ready(){
     function qtyChanged () {
         let quantityInput = document.getElementsByClassName("quantity-input");
         for (let i=0; i < quantityInput.length; i++){
-            let qty = quantityInput[i];
-            qty.addEventListener('change', (e) => {
-                qty.value = parseInt(e.target.value);
-                console.log(typeof(qty.value));
-                if (isNaN(qty.value) || qty.value <= 0) {
-                    qty.value = 1;
-                } else{
-                    console.log('valid');
-                }
+            var qtyIn = quantityInput[i];
+            var qty = qtyIn.value;
+            qtyIn.addEventListener('change', (e) => {
+                qty = parseInt(e.target.value);
+                console.log(typeof(qty));
+                if (isNaN(qty) || qty <= 0) {
+                    qty = 1;
+                } 
                 updatePriceTotal();
             })
 
