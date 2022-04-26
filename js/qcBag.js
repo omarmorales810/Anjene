@@ -5,12 +5,13 @@ if (document.readyState == "loading"){
 }
     
 function ready(){
+    console.log('ready');
     const initiliazeCount = () => {
         const countItems = [];
         const itemsWrapper = document.getElementById('bag-page-table');
         let itemsWrapperLength =  itemsWrapper.children.length;
         for (i= 0; i < itemsWrapperLength; i++){
-            countItems.push(1)
+            countItems.push(1);
         };
         return countItems;
     }
@@ -42,7 +43,7 @@ function ready(){
 
         const incrementQty = (count) => {
 
-            for (let i=0; i <= increment.length; i++){
+            for (let i=0; i < increment.length; i++){
                 let quantityInput = document.getElementsByClassName("quantity-input")[i];
                 quantityInput.value = count[i];
                 let incBtn = increment[i];
