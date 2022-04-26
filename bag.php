@@ -46,9 +46,9 @@
           </div>
           <div class="bag-page-table-item-product">
             <div class="bag-page-table-product-content">
-              <div class="bag-page-table-item-name">Apple Watch Series 6 </div>
+              <div class="bag-page-table-item-name">Apple Product #2 </div>
               <div class="bag-page-item-price">
-                <span style="font-size: 0.9rem;">₱987.00</span>
+                <span style="font-size: 0.9rem;">₱97.00</span>
               </div>
             </div>
             <div class="bag-page-table-item-quantity">
