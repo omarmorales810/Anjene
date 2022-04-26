@@ -14,6 +14,5 @@ if ($row = mysqli_fetch_assoc($result)) {
   $product_image = $row["image"];
   $product_price = $row["price"];
   $product_description = $row["description"];
-
 }
 
