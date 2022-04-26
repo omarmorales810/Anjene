@@ -21,40 +21,40 @@ function ready(){
         const decrement = document.getElementsByClassName("quantity-btn-decrement");
         const initiliazeCountResult = initiliazeCount();
 
-        const decrementQty = () => {
+        const decrementQty = (count) => {
             
             for (let i = 0; i < decrement.length; i++){
                 let quantityInput = document.getElementsByClassName("quantity-input")[i];
-                quantityInput.value = initiliazeCountResult[i];
+                quantityInput.value = count[i];
                 let decBtn = decrement[i];
 
                 decBtn.addEventListener('click', () => {
-                    if (initiliazeCountResult[i] > 1) {
-                        initiliazeCountResult[i]--;
-                        quantityInput.value = initiliazeCountResult[i];
+                    if (count[i] > 1) {
+                        count[i]--;
+                        quantityInput.value = count[i];
                     } else {
                         quantityInput.value = 1;
                     }
                 });
             } 
         }
-        decrementQty()
+        decrementQty(initiliazeCountResult);
 
-        const incrementQty = () => {
+        const incrementQty = (count) => {
 
             for (let i=0; i <= increment.length; i++){
                 let quantityInput = document.getElementsByClassName("quantity-input")[i];
-                quantityInput.value = initiliazeCountResult[i];
+                quantityInput.value = count[i];
                 let incBtn = increment[i];
 
                 incBtn.addEventListener('click', () => {
-                    initiliazeCountResult[i]++;
-                    quantityInput.value = initiliazeCountResult[i];
+                    count[i]++;
+                    quantityInput.value = count[i];
                     
                 });
             }
         }
-        incrementQty()
+        incrementQty(initiliazeCountResult);
 
         
     } 
