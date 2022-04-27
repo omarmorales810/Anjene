@@ -14,4 +14,4 @@ const tiles = document.querySelector('.tiles');
     }
   }
   xhr.send();
-// }, 0);
+// }, 300);

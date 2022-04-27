@@ -99,11 +99,6 @@
     </div>
   </section>
 
-
-
-
-   
-
   <script src="./js/nav.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/removeTransitionOnResize.js"></script>
