@@ -1,3 +1,11 @@
+<?php 
+  session_start();
+
+  if (isset($_SESSION["user"])) {
+    echo "<script>window.location.href='index.php'</script>";
+  }
+?>
+
 <?php require_once "./require/header.php"; ?>
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>

@@ -5,7 +5,7 @@
   require_once "./require/config.php";
   require_once "./require/display-error.php";
 
-  $search = mysqli_real_escape_string($conn, $_GET['header-search']);
+  $search = mysqli_real_escape_string($conn, $_GET['search_query']);
 
   $output = '<section class="search-page">
   <div class="search-page-container">

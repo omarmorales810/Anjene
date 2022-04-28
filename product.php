@@ -28,7 +28,7 @@
     <div class="page-product-container">
       <div class="page-product-left">
         <div class="page-product-img">
-          <img src="./img/<?php echo $product_image ?>" alt="">
+          <img class="page-product-img-url" src="./img/<?php echo $product_image ?>" alt="">
         </div>
       </div>
       <div class="page-product-right">

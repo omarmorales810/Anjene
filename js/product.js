@@ -31,6 +31,10 @@ addToBagBtn.onclick = () => {
           modal.classList.add("active");
           modalBanner.classList.add("active");
         }
+
+        if (data == "user_session_not_set") {
+          location.href = "login.php";
+        }
       }
     }
   }

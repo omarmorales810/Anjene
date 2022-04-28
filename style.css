@@ -315,6 +315,7 @@ img {
   padding: 0.9rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
+  text-decoration: none;
 }
 
 .bag-view-link {
@@ -1710,7 +1711,7 @@ input[type=number] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .modal-banner {
@@ -1740,7 +1741,7 @@ input[type=number] {
 }
 
 .modal-text {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
 }
 
 .modal-svg {
@@ -1980,7 +1981,7 @@ input[type=number] {
 
 .search-item .search-item-header {
   font-size: 20px;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid rgba(0, 0, 0 ,0.1);
   width: 100%;
 }
@@ -2198,7 +2199,7 @@ input[type=number] {
   margin-bottom: 1.5rem;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.17);
 }
 
 .bag-page-table-item-img-container img {
