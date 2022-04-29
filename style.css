@@ -268,6 +268,7 @@ img {
   align-items: center;
   font-size: 12px;
   z-index: 999;
+  display: none;
 }
 
 .bag {
@@ -311,7 +312,7 @@ img {
 .bag-added-item-container {
   width: 100%;
   text-align: center;
-  height: 50px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;

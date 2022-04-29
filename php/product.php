@@ -21,7 +21,7 @@ if (isset($_SESSION["user"])) {
       $result = mysqli_query($conn, $sql);
 
       if ($result) {
-        echo "added to cart";
+        echo "added-to-cart";
       }
     }
   }
@@ -30,7 +30,7 @@ if (isset($_SESSION["user"])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
-      echo "added to cart";
+      echo "added-to-cart";
     }
   }
 }

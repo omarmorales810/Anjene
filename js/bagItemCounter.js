@@ -9,6 +9,13 @@ setInterval(() => {
       if (xhr.status === 200) {
         let data = xhr.response;
         bagItemCounter.innerHTML = data;
+
+        if (data == "hide-bag-item-counter") {
+          bagItemCounter.style.display = "none";
+        }
+        else {
+          bagItemCounter.style.display = "flex";
+        }
       }
     }
   }

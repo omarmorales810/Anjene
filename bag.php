@@ -7,10 +7,10 @@
       <div id="bag-page-table" class="bag-page-table">
         
       </div>
-      <!-- <div class="check-out-and-remove-all-btn-container">
+      <div class="check-out-and-remove-all-btn-container">
         <span class="total-item-price"></span>
         <button class="checkout-btn">Checkout</button>
-      </div> -->
+      </div>
     </div>
   </section>
 
