@@ -172,9 +172,6 @@
             const decrementBtnSvg = document.querySelector(".quantity-btn-decrement svg");
             const incrementBtnSvg = document.querySelector(".quantity-btn-increment svg");
             const numberInput = document.querySelector(".quantity-input");
-            const modalBtnPhp = document.querySelector(".modal-btn");
-            const modalPhp = document.querySelector(".modal");
-            const modalBannerPhp = document.querySelector(".modal-banner");
 
             let count = 1;
             numberInput.value = count;
@@ -215,17 +212,6 @@
                 count = '.$product_quantity.';
                 numberInput.value = count;
               }
-            }
-
-            modalBtnPhp.onclick = () => {
-              count = 0;
-              numberInput.value = count;
-              modalPhp.style.opacity = 0;
-              modalPhp.style.pointerEvents = "none";
-              modalBannerPhp.style.opacity = 0;
-              modalBannerPhp.style.pointerEvents = "none";
-              incrementBtn.classList.remove("active");
-              incrementBtnSvg.classList.remove("active");
             }
           </script>';
   ?>

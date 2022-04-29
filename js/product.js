@@ -26,6 +26,7 @@ addToBagBtn.onclick = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         let data = xhr.response;
+        console.log(data);
         
         if (data == "added to cart") {
           modal.classList.add("active");
@@ -41,6 +42,7 @@ addToBagBtn.onclick = () => {
   let formData = new FormData(productForm); // Creating new formData object
   xhr.send(formData); // Sending the form data to php
 }
+
 
 
 

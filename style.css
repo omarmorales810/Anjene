@@ -255,6 +255,21 @@ img {
   width: 100%;
 }
 
+.item-counter {
+  position: absolute;
+  right: -15px;
+  background-color: #0066cc;
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  z-index: 999;
+}
+
 .bag {
   position: relative;
   display: flex;
@@ -512,6 +527,12 @@ img {
     z-index: 999;
     height: 50px;
     width: 60px;
+  }
+
+  .item-counter {
+    position: absolute;
+    right: 10px;
+    top: 4px;
   }
 
   .bag-view-content {
@@ -1148,6 +1169,16 @@ img {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .header {
+    font-size: 25px;
+  }
+
+  .intro-form-text span {
+    font-size: 16px;
+  }
+}
+
 /* --------------------------- #Signup / Signin --------------------------- */
 
 
@@ -1387,6 +1418,11 @@ input[type=number] {
   color: #505050;
   text-align: center;
   pointer-events: none;
+}
+
+.bag-quantity-input {
+  border-left: none !important;
+  border-right: none !important;
 }
 
 .stocks {
@@ -2199,7 +2235,8 @@ input[type=number] {
   margin-bottom: 1.5rem;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.17);
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.17); */
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .bag-page-table-item-img-container img {

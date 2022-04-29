@@ -1,7 +1,7 @@
 
 
 <?php
-  session_start();
+  // session_start();
   require_once "./require/config.php";
   require_once "./require/display-error.php";
 

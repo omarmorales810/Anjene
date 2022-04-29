@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,8 +68,12 @@
                 <li class="bag-view-item">
                   <a href="" class="bag-view-link">Account</a>
                 </li>
-                <li class="bag-view-item">
-                  <a href="../login.php" class="bag-view-link">Sign in</a>
+                <li class="bag-view-item bag-view-item-user-sign-in">
+                  <?php if (isset($_SESSION["user"])) { ?>
+                    <a href="./php/logout.php" class="bag-view-link">Log out</a>
+                  <?php } else { ?>
+                    <a href="./login.php" class="bag-view-link">Sign in</a>
+                  <?php } ?>
                 </li>
               </ul>
 
