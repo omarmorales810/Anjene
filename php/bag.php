@@ -45,9 +45,9 @@ if (isset($_SESSION["user"])) {
                         <div class="item-total-price" >₱22, 490.00</div>
                         <div class="total-price-text">Total Price</div>
                       </div>
-                      <div class="bag-page-table-item-remove">
-                        <button class="item-remove-btn">Remove</button>
-                      </div>
+                      <form action="#" class="bag-page-table-item-remove" id="remove-item-form">
+                        <button class="item-remove-btn" id="remove-btn">Remove</button>
+                      </form>
                     </div>
                   </div>';
     }
@@ -84,4 +84,6 @@ else {
 }
 
 echo $output;
+
+
 

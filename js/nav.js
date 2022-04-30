@@ -10,6 +10,7 @@ const mobileNav = document.querySelector(".mobile-nav");
 const mobileMenu = document.querySelector(".burger-container");
 const navBag = document.querySelector(".bag");
 const bagViewBox = document.querySelector(".bag-view-content");
+const bagItemCounterNav = document.querySelector(".item-counter");
 
 let resetTimer2;
 let toggleTrue = true;
@@ -83,6 +84,7 @@ mobileMenu.onclick = () => {
     mobileMenu.classList.toggle("active");
     navBag.classList.toggle("active");
     bagViewBox.classList.remove("active");
+    bagItemCounterNav.classList.toggle("active");
   }
 
   clearTimeout(resetTimer2);  
@@ -105,6 +107,7 @@ window.onresize = () => {
     mobileNav.classList.remove("active");
     mobileMenu.classList.remove("active");
     navBag.classList.remove("active");
+    bagItemCounterNav.classList.remove("active");
   }
 }
 
@@ -118,4 +121,5 @@ window.onscroll = () => {
   mobileNav.classList.remove("active");
   mobileMenu.classList.remove("active");
   navBag.classList.remove("active");
+  bagItemCounterNav.classList.remove("active");
 }

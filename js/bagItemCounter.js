@@ -8,16 +8,15 @@ setInterval(() => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         let data = xhr.response;
-        bagItemCounter.innerHTML = data;
 
         if (data == "hide-bag-item-counter") {
-          bagItemCounter.style.display = "none";
+          bagItemCounter.innerHTML = 0;
         }
         else {
-          bagItemCounter.style.display = "flex";
+          bagItemCounter.innerHTML = data;
         }
       }
     }
   }
   xhr.send();
-}, 300);
+}, 100);

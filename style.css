@@ -119,6 +119,10 @@ img {
   pointer-events: none;
 }
 
+.item-counter.active {
+  opacity: 0;
+}
+
 /* remove transition on resize (removeTranstionOnResize.js) */
 .remove-all-transitions {
   transition: none !important;
@@ -268,7 +272,8 @@ img {
   align-items: center;
   font-size: 12px;
   z-index: 999;
-  display: none;
+  /* display: none; */
+  transition: opacity 500ms ease;
 }
 
 .bag {
@@ -292,15 +297,17 @@ img {
   justify-content: center;  
   align-items: center;
   flex-direction: column;
-  gap: 1rem;
+  /* gap: 1rem; */
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 17px;
   list-style-type: none;
-  opacity: 0;
   pointer-events: none;
+  opacity: 0;
+  /* pointer-events: none; */
   transition: opacity 300ms ease;
   /* box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1); */
+  gap: 0.5rem;
 }
 
 
@@ -312,10 +319,12 @@ img {
 .bag-added-item-container {
   width: 100%;
   text-align: center;
-  height: 40px;
+  height: auto !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .bag-view-container {
@@ -343,6 +352,67 @@ img {
 .bag-view-link:hover {
   text-decoration: underline;
 }
+
+.bag-added-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 17px;
+  cursor: pointer;
+  transition: background 200ms ease;
+  text-decoration: none;
+}
+
+.bag-added-item:hover {
+  background-color: #f2f2f2;
+}
+
+.bag-added-item-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.bag-added-item-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.bag-added-item-name {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: none;
+  text-overflow: ellipsis;
+  color: #1d1d1f;
+}
+
+.bag-added-item-price {
+  font-size: 14px;
+  color: #1d1d1f;
+}
+
+.bag-view-content-empty {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.bag-more-item {
+  width: 100%;
+  text-align: end;
+  font-size: 14px;
+  padding: 0.5rem 0.5rem;
+  display: none;
+}
+
+
+
+
+
+
 
 /* Triangle */
 
@@ -528,6 +598,10 @@ img {
     z-index: 999;
     height: 50px;
     width: 60px;
+  }
+
+  .bag-added-item-container {
+    height: 46px;
   }
 
   .item-counter {
@@ -2337,6 +2411,7 @@ input[type=number] {
   flex-direction: column;
   padding-bottom: 2rem;
   gap: 1rem;
+  width: 100%;
 }
 
 .checkout-btn {
