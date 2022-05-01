@@ -9,6 +9,7 @@ const bagTable = document.getElementById('bag-page-table');
       if (xhr.status === 200) {
         let data = xhr.response;
         bagTable.innerHTML = data;
+        eval(this.responseText);
       }
     }
   }
