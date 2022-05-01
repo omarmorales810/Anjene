@@ -1,6 +1,6 @@
 const tiles = document.querySelector('.tiles');
 
-setInterval(() => {
+// setInterval(() => {
   // Ajax
   let xhr = new XMLHttpRequest(); // Creating XML object.
   xhr.open("GET", "./php/index.php", true);
@@ -13,6 +13,6 @@ setInterval(() => {
     }
   }
   xhr.send();
-}, 300);
+// }, 3000);
 
 
