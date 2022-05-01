@@ -12,5 +12,5 @@ window.addEventListener("resize", () => {
       navContainer2.classList.remove("remove-all-transitions");
       mobileNav2.classList.remove("remove-all-transitions");
       // tile.classList.remove("remove-all-transitions");
-  }, 400);
+  }, 300);
 });

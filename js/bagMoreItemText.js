@@ -24,4 +24,4 @@ const moreItemText = document.querySelector('.bag-more-item');
       }
     }
     xhr.send();
-  }, 1000);
+  }, 300);

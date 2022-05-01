@@ -2,22 +2,25 @@
 
 session_start();
 
-
 if (isset($_SESSION["user"])) {
-  require_once "../require/config.php";
-  require_once "../require/display-error.php";
+  $conn = mysqli_connect("localhost", "root", "", "ecommerce_sadd");
   $session_id = $_SESSION["user"];
-  $sql = "SELECT bag_item.product_id, bag_item.session_id, product.name, bag_item.quantity , product.price, product.image FROM bag_item INNER JOIN product ON bag_item.product_id = product.id WHERE bag_item.session_id = {$session_id};";
+  $sql = "SELECT bag_item.id, bag_item.product_id, bag_item.session_id, product.name, bag_item.quantity , product.price, product.image FROM bag_item INNER JOIN product ON bag_item.product_id = product.id WHERE bag_item.session_id = {$session_id};";
   $result = mysqli_query($conn, $sql);
   $rowCount = mysqli_num_rows($result);
   $output = "";
+  $remove_btn = "remove-btn";
+  $remove_item_form = "remove-item-form";
 
   if ($rowCount > 0) {
+    $bool = true;
     while ($row = mysqli_fetch_assoc($result)) {
+      $test = $row["id"];
       $product_image = $row["image"];
       $product_price = $row["price"];
       $product_quantity = $row["quantity"];
       $product_name = $row["name"];
+      $product_total_price = $row["price"] * $row["quantity"];
       $output .= ' <div class="bag-page-table-item">
                     <div class="bag-page-table-item-img-container">
                       <img src="./img/'.$product_image.'" alt="dfd">
@@ -26,7 +29,7 @@ if (isset($_SESSION["user"])) {
                       <div class="bag-page-table-product-content">
                         <div class="bag-page-table-item-name">'.$product_name.'</div>
                         <div class="bag-page-item-price">
-                          <span style="font-size: 0.9rem;">'.number_format( $product_price, 2, '.', ', ' ).'</span>
+                          <span style="font-size: 0.9rem;">₱'.number_format($product_price, 2, '.', ', ' ).'</span>
                         </div>
                       </div>
                       <div class="bag-page-table-item-quantity">
@@ -42,18 +45,18 @@ if (isset($_SESSION["user"])) {
                         <div class="bag-quantity-text">Quantity</div>
                       </div>
                       <div class="bag-page-table-item-total-price">
-                        <div class="item-total-price" >₱22, 490.00</div>
+                        <div class="item-total-price" >₱'.number_format($product_total_price, 2, '.', ', ' ).'</div>
                         <div class="total-price-text">Total Price</div>
                       </div>
-                      <form action="#" class="bag-page-table-item-remove" id="remove-item-form">
-                        <button class="item-remove-btn" id="remove-btn">Remove</button>
+                      <form action="#" class="bag-page-table-item-remove" id="'.$remove_item_form.'">
+                        <button class="item-remove-btn" id="'.$remove_btn.'">Remove</button>
                       </form>
                     </div>
                   </div>';
     }
   }
   else {
-    $output = ' <div class="empty-bag-container">
+    $output .= ' <div class="empty-bag-container">
                   <div class="empty-bag-message-container">
                     <div class="empty-bag-text">Your bag is empty</div>
                   </div>
@@ -64,10 +67,9 @@ if (isset($_SESSION["user"])) {
                   </div>
                 </div>';
   }
-  
 }
 else {
-  $output = ' <div class="empty-bag-container">
+  $output .= ' <div class="empty-bag-container">
                   <div class="empty-bag-message-container">
                     <div class="empty-bag-text">Your bag is empty</div>
                     <div class="empty-bag-message">Sign in to see if you have any saved items. Or continue shopping.</div>
@@ -84,6 +86,5 @@ else {
 }
 
 echo $output;
-
 
 

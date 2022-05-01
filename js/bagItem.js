@@ -1,6 +1,6 @@
 const bagTable = document.getElementById('bag-page-table');
 
-setInterval(() => {
+// setInterval(() => {
   // Ajax
   let xhr = new XMLHttpRequest(); // Creating XML object.
   xhr.open("GET", "./php/bag.php", true);
@@ -13,5 +13,5 @@ setInterval(() => {
     }
   }
   xhr.send();
-}, 1000);
+// }, 300);
 
