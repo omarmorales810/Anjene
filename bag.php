@@ -12,11 +12,13 @@
     $bool = false;
     $remove_btn = "item-remove-btn";
     $remove_item_form = "bag-page-table-item-remove";
+    $count = 0;
   
     if ($rowCount > 0) {
       $bool = true;
       while ($row = mysqli_fetch_assoc($result)) {
         // $output += 1;
+        $count += 1;
         $id = $row["id"];
         $product_image = $row["image"];
         $product_price = $row["price"];
@@ -50,11 +52,39 @@
                           <div class="item-total-price" >₱'.number_format($product_total_price, 2, '.', ', ' ).'</div>
                           <div class="total-price-text">Total Price</div>
                         </div>
-                        <form action="#" class="'.$remove_item_form.'" id="'.$remove_item_form.'">
-                          <button class="'.$remove_btn.'" id="'.$remove_btn.'">Remove</button>
+                        <form action="#" class="'.$remove_item_form.'" id="'.$remove_item_form.''.$count.'">
+                          <button class="'.$remove_btn.'" id="'.$remove_btn.''.$count.'">Remove</button>
                         </form>
                       </div>
-                    </div>';
+                    </div>
+                    
+                    
+                    
+                    <script>
+                      const deleteForm'.$count.' = document.getElementById("'.$remove_item_form.''.$count.'");
+                      const deleteBtn'.$count.' = document.getElementById("'.$remove_btn.''.$count.'");
+                      
+                        deleteForm'.$count.'.addEventListener("submit", (e) => {
+                          e.preventDefault(); // Preventing form from submitting
+                        });
+                      
+                        deleteBtn'.$count.'.addEventListener("click", () => {
+                          let xhr = new XMLHttpRequest(); // Creating XML object
+                          xhr.open("POST", "./php/bag_delete_item.php?test='.$id.'", true);
+                          xhr.addEventListener("load", () => {
+                            if(xhr.readyState === XMLHttpRequest.DONE) {
+                              if(xhr.status === 200) {
+                                let data = xhr.response;
+                                
+                                console.log(data);
+                              }
+                            }
+                          });
+                          let formData = new FormData(deleteForm'.$count.'); // Creating new formData object
+                          xhr.send(formData);
+                        });
+                    </script>
+                    ';
       }
     }
     else {
@@ -120,36 +150,5 @@
   ?> -->
   
   <!-- delete item script -->
-  <?php 
-    echo "<script>
-    const deleteForm = document.getElementsByClassName('".$remove_item_form."');
-    const deleteBtn = document.getElementsByClassName('".$remove_btn."');
-    
-    for(let i = 0; i < deleteForm.length; i++) {
-      deleteForm[i].addEventListener('submit', (e) => {
-        e.preventDefault(); // Preventing form from submitting
-      });
-    }
-    
-    for(let i = 0; i < deleteBtn.length; i++) {
-      deleteBtn[i].addEventListener('click', () => {
-        let xhr = new XMLHttpRequest(); // Creating XML object
-        xhr.open('POST', './php/bag_delete_item.php?delete_query=".$id."', true);
-        xhr.addEventListener('load', () => {
-          if(xhr.readyState === XMLHttpRequest.DONE) {
-            if(xhr.status === 200) {
-              let data = xhr.response;
-              
-              console.log(data);
-            }
-          }
-        });
-        let formData = new FormData(deleteForm[i]); // Creating new formData object
-        xhr.send(formData);
-      });
-    }
-    
-    </script>";
-  ?>
 </body>
 </html>
