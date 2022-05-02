@@ -6,7 +6,7 @@ if (isset($_SESSION['user'])) {
   require_once '../require/config.php';
   require_once '../require/display-error.php';
   $session_id = $_SESSION['user'];
-  $sql = "SELECT bag_item.id, bag_item.product_id, bag_item.session_id, product.name, bag_item.quantity , product.price, product.image FROM bag_item INNER JOIN product ON bag_item.product_id = product.id WHERE bag_item.session_id = {$session_id};";
+  $sql = "SELECT bag_item.id, bag_item.product_id, bag_item.session_id, product.name, bag_item.quantity , product.stock, product.price, product.image FROM bag_item INNER JOIN product ON bag_item.product_id = product.id WHERE bag_item.session_id = {$session_id};";
   $result = mysqli_query($conn, $sql);
   $rowCount = mysqli_num_rows($result);
   $output = '';
@@ -14,6 +14,12 @@ if (isset($_SESSION['user'])) {
   $remove_btn = 'item-remove-btn';
   $remove_item_form = 'bag-page-table-item-remove';
   $bag_item = 'bag-page-table-item';
+
+  $decrement_form = "quantity-form-decrement";
+  $increment_form = "quantity-form-increment";
+  $decrement_btn = "quantity-btn-decrement";
+  $increment_btn = "quantity-btn-increment";
+  $quantity_input = "quantity-input";
   $count = 0;
 
   if ($rowCount > 0) {
@@ -22,6 +28,7 @@ if (isset($_SESSION['user'])) {
       // $output += 1;
       $count += 1;
       $id = $row['id'];
+      $product_stock = $row["stock"];
       $product_image = $row['image'];
       $product_price = $row['price'];
       $product_quantity = $row['quantity'];
@@ -40,13 +47,17 @@ if (isset($_SESSION['user'])) {
                       </div>
                       <div class='bag-page-table-item-quantity'>
                         <div class='quantity-btn-container'>
-                          <span class='quantity-btn'>
-                            <svg style='width: 12px; height: 20px' fill='#707070' enable-background='new 0 0 10 10' viewBox='0 0 10 10' x='0' y='0' class='shopee-svg-icon'><polygon points='4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5'></polygon></svg>
-                          </span>
-                          <input type='number' class='quantity-input bag-quantity-input' name='add-to-bag-quantity' value='$product_quantity'>
-                          <span class='quantity-btn'>
-                            <svg style='width: 12px; height: 20px' fill='#707070' enable-background='new 0 0 10 10' viewBox='0 0 10 10' x='0' y='0' class='shopee-svg-icon icon-plus-sign'><polygon points='10 4.5 5.5 4.5 5.5 0 4.5 0 4.5 4.5 0 4.5 0 5.5 4.5 5.5 4.5 10 5.5 10 5.5 5.5 10 5.5'></polygon></svg>
-                          </span>
+                          <form action='#' id='".$increment_form."".$count."'>
+                            <button class='quantity-btn' id='".$increment_btn."".$count."'>
+                              <svg style='width: 12px; height: 20px' fill='#707070' enable-background='new 0 0 10 10' viewBox='0 0 10 10' x='0' y='0' class='shopee-svg-icon'><polygon points='4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5'></polygon></svg>
+                            </button>
+                          </form>
+                          <input type='number' id='".$quantity_input."".$count."' class='quantity-input bag-quantity-input' name='add-to-bag-quantity' value='$product_quantity'>
+                          <form action='#' id='".$decrement_form."".$count."'>
+                            <button class='quantity-btn' id='".$decrement_btn."".$count."'>
+                              <svg style='width: 12px; height: 20px' fill='#707070' enable-background='new 0 0 10 10' viewBox='0 0 10 10' x='0' y='0' class='shopee-svg-icon icon-plus-sign'><polygon points='10 4.5 5.5 4.5 5.5 0 4.5 0 4.5 4.5 0 4.5 0 5.5 4.5 5.5 4.5 10 5.5 10 5.5 5.5 10 5.5'></polygon></svg>
+                            </button>
+                          </form>
                         </div>
                         <div class='bag-quantity-text'>Quantity</div>
                       </div>
@@ -64,7 +75,27 @@ if (isset($_SESSION['user'])) {
                     var deleteForm$count = document.getElementById('".$remove_item_form."".$count."');
                     var button$count = document.querySelector('#".$remove_btn."".$count."');
 
+                    var incrementForm$count = document.getElementById('".$decrement_form."".$count."');
+                    var buttonIncrement$count = document.getElementById('".$decrement_btn."".$count."');
+
+                    var decrememtForm$count = document.getElementById('".$increment_form."".$count."');
+                    var buttonDecrement$count = document.getElementById('".$increment_btn."".$count."');
+
+                    var decrementBtnSvg$count = document.querySelector('#".$decrement_btn."".$count." svg');
+                    var incrementBtnSvg$count = document.querySelector('#".$increment_btn."".$count." svg');
+
+                    var quantityInput$count = document.querySelector('#".$quantity_input."".$count."');
+
+
                     deleteForm$count.onsubmit = (e) => {
+                      e.preventDefault();
+                    }
+
+                    incrementForm$count.onsubmit = (e) => {
+                      e.preventDefault();
+                    }
+
+                    decrememtForm$count.onsubmit = (e) => {
                       e.preventDefault();
                     }
 
@@ -75,43 +106,79 @@ if (isset($_SESSION['user'])) {
                         if(xhr.readyState === XMLHttpRequest.DONE) {
                           if(xhr.status === 200) {
                             let data = xhr.response;
-                            
-                            console.log(data);
+                            alert('item has been removed');
                           }
                         }
                       }
                       let formData = new FormData(deleteForm$count); // Creating new formData object
                       xhr.send(formData);
                     }
+
+                    if ($product_quantity > 1) {
+                      buttonDecrement$count.onclick = () => {
+                        let xhr = new XMLHttpRequest(); // Creating XML object
+                        xhr.open('GET', './php/bag_decrement.php?item_id=$id', true);
+                        xhr.onload = () => {
+                          if(xhr.readyState === XMLHttpRequest.DONE) {
+                            if(xhr.status === 200) {
+                              let data = xhr.response;
+                            }
+                          }
+                        }
+                        let formData = new FormData(deleteForm$count); // Creating new formData object
+                        xhr.send(formData);
+                        
+                        var resizeTimer$count;
+                        buttonDecrement$count.classList.add('fade-border');
+                        buttonIncrement$count.classList.add('fade-border');
+                        quantityInput$count.classList.add('fade-border');
+                        decrementBtnSvg$count.classList.add('fade-border-svg');
+                        incrementBtnSvg$count.classList.add('fade-border-svg');
+                        clearTimeout(resizeTimer);
+                        resizeTimer$count = setTimeout(() => {
+                          buttonDecrement$count.classList.remove('fade-border');
+                          buttonIncrement$count.classList.remove('fade-border');
+                          quantityInput$count.classList.remove('fade-border');
+                          decrementBtnSvg$count.classList.remove('fade-border-svg');
+                          incrementBtnSvg$count.classList.remove('fade-border-svg');
+                        }, 1000);
+                      }
+                    }
+
+                    if ($product_quantity < $product_stock) {
+                      buttonIncrement$count.onclick = () => {
+                        let xhr = new XMLHttpRequest(); // Creating XML object
+                        xhr.open('GET', './php/bag_increment.php?item_id=$id', true);
+                        xhr.onload = () => {
+                          if(xhr.readyState === XMLHttpRequest.DONE) {
+                            if(xhr.status === 200) {
+                              let data = xhr.response;
+                            }
+                          }
+                        }
+                        let formData = new FormData(deleteForm$count); // Creating new formData object
+                        xhr.send(formData);
+
+                        var resizeTimer$count;
+                        buttonDecrement$count.classList.add('fade-border');
+                        buttonIncrement$count.classList.add('fade-border');
+                        quantityInput$count.classList.add('fade-border');
+                        decrementBtnSvg$count.classList.add('fade-border-svg');
+                        incrementBtnSvg$count.classList.add('fade-border-svg');
+                        clearTimeout(resizeTimer);
+                        resizeTimer$count = setTimeout(() => {
+                          buttonDecrement$count.classList.remove('fade-border');
+                          buttonIncrement$count.classList.remove('fade-border');
+                          quantityInput$count.classList.remove('fade-border');
+                          decrementBtnSvg$count.classList.remove('fade-border-svg');
+                          incrementBtnSvg$count.classList.remove('fade-border-svg');
+                        }, 1000);
+                      }
+                    }
+
+
                   </script>
                   ";
-
-
-                  // const deleteForm'.$count.' = document.getElementById("'.$remove_item_form.''.$count.'");
-//                     const deleteBtn'.$count.' = document.getElementById("'.$remove_btn.''.$count.'");
-//                     const bagItem'.$count.' = document.getElementById("'.$bag_item.''.$count.'");
-                    
-//                       deleteForm'.$count.'.addEventListener("submit", (e) => {
-//                         e.preventDefault(); // Preventing form from submitting
-//                       });
-                    
-//                       deleteBtn'.$count.'.addEventListener("click", () => {
-//                         let xhr = new XMLHttpRequest(); // Creating XML object
-//                         xhr.open("POST", "./php/bag_delete_item.php?item_id='.$id.'", true);
-//                         xhr.addEventListener("load", () => {
-//                           if(xhr.readyState === XMLHttpRequest.DONE) {
-//                             if(xhr.status === 200) {
-//                               let data = xhr.response;
-                              
-//                               console.log(data);
-//                             }
-//                           }
-//                         });
-//                         let formData = new FormData(deleteForm'.$count.'); // Creating new formData object
-//                         xhr.send(formData);
-
-//                         location.href="bag.php";
-//                       });
     }
   }
   else {

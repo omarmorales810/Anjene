@@ -14,3 +14,4 @@ window.addEventListener("resize", () => {
       // tile.classList.remove("remove-all-transitions");
   }, 300);
 });
+

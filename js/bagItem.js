@@ -1,18 +1,12 @@
-const bagTable = document.getElementById('bag-page-table');
+setInterval(() => {
+  $.ajax({
+url: 'php/bag.php',
+type: 'GET',
+data: "check",
 
-// setInterval(() => {
-  // Ajax
-  let xhr = new XMLHttpRequest(); // Creating XML object.
-  xhr.open("GET", "./php/bag.php", true);
-  xhr.onload = () => {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.status === 200) {
-        let data = xhr.response;
-        bagTable.innerHTML = data;
-        eval(this.responseText);
-      }
-    }
-  }
-  xhr.send();
-// }, 300);
+success: function(response) {
+  $('.bag-page-table').html(response);
+}
+});
+}, 1000);
 

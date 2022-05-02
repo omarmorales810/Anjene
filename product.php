@@ -16,7 +16,7 @@
     $product_name = $row["name"];
     $product_image = $row["image"];
     $product_price = $row["price"];
-    $product_quantity = $row["quantity"];
+    $product_quantity = $row["stock"];
     $product_description = $row["description"];
     $_SESSION["product_id"] = $product_id;
   }

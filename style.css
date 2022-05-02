@@ -149,6 +149,19 @@ img {
 	width: 16px;
  }
 
+ .fade-border {
+   border: 1px solid #ebebeb !important;
+   pointer-events: none !important;
+   fill: #d3d3d3 !important;
+   color: #d3d3d3 !important;
+ }
+
+ .fade-border-svg {
+  pointer-events: none !important;
+  fill: #d3d3d3 !important;
+}
+
+
 
 
 /* --------------------------- Header --------------------------- */
