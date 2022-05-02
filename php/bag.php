@@ -142,6 +142,8 @@ if (isset($_SESSION['user'])) {
                           decrementBtnSvg$count.classList.remove('fade-border-svg');
                           incrementBtnSvg$count.classList.remove('fade-border-svg');
                         }, 1000);
+
+                        alert('test');
                       }
                     }
 

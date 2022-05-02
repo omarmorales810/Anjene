@@ -2322,8 +2322,10 @@ input[type=number] {
   padding: 15px 25px;
   margin-bottom: 1.5rem;
   border-radius: 17px;
-  background: #fff;
-  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.17); */
+  background: hsla(0,0%,100%,.8);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
