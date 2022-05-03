@@ -5,10 +5,15 @@
       <div class="bag-page-header">(0 Item)</div>
       <div id="bag-page-table" class="bag-page-table"></div>
 
-      <div class="check-out-and-remove-all-btn-container">
-        <span class="total-item-price"></span>
-        <button class="checkout-btn">Checkout</button>
-      </div>
+      <form action="#" class="check-out-and-remove-all-btn-container">
+        <header>
+          <span class="total-item-price"></span>
+          <button class="item-remove-btn remove-all-btn" style="position: relative; top: 0px !important;">Remove all</button>
+        </header>
+        <div class="checkout-btn-container">
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </form>
     </div>
   </section>
   <footer class="footer">
@@ -28,7 +33,7 @@
       $('.bag-page-header').html("(" + response + " Item)");
     }
     });
-  }, 300);
+  }, 1000);
   </script>
 
   <script>
@@ -62,13 +67,37 @@
       if (xhr.readyState === XMLHttpRequest.DONE) {
         if (xhr.status === 200) {
           let data = xhr.response;
-          totalPrice.innerHTML = "Total (₱" + data + ")";
+          totalPrice.innerHTML = "Overall (₱" + data + ")";
         }
       }
     }
     xhr.send();
   }, 1000);
   </script>
+
+
+<script>
+  const bagForm = document.querySelector(".check-out-and-remove-all-btn-container");
+  const removeAllBtn = document.querySelector(".remove-all-btn");
+
+  bagForm.onsubmit = (e) => {
+    e.preventDefault();
+  }
+
+  removeAllBtn.onclick = () => {
+    let xhr = new XMLHttpRequest(); // Creating XML object.
+    xhr.open("POST", "php/bag_remove_all.php", true);
+    xhr.onload = () => {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          let data = xhr.response;
+          alert("All item has been deleted");
+        }
+      }
+    }
+    xhr.send();
+  }
+</script>
 
 
 </body>

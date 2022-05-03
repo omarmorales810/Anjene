@@ -28,6 +28,7 @@ if (isset($_SESSION['user'])) {
       // $output += 1;
       $count += 1;
       $id = $row['id'];
+      $product_id = $row["product_id"];
       $product_stock = $row["stock"];
       $product_image = $row['image'];
       $product_price = $row['price'];
@@ -40,7 +41,7 @@ if (isset($_SESSION['user'])) {
                     </div>
                     <div class='bag-page-table-item-product'>
                       <div class='bag-page-table-product-content'>
-                        <div class='bag-page-table-item-name'>$product_name</div>
+                        <a href='./product.php?product_id=" . $product_id . "' class='bag-page-table-item-name'>$product_name</a>
                         <div class='bag-page-item-price'>
                           <span style='font-size: 0.9rem;'>₱".number_format($product_price, 2, '.', ', ' )."</span>
                         </div>
@@ -116,7 +117,7 @@ if (isset($_SESSION['user'])) {
                         if(xhr.readyState === XMLHttpRequest.DONE) {
                           if(xhr.status === 200) {
                             let data = xhr.response;
-                            alert('item has been removed');
+                            alert('Item has been removed');
                           }
                         }
                       }

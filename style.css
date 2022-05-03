@@ -948,6 +948,7 @@ img {
   width: 910px;
   padding: 20px 0;
   padding-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .tile {
@@ -1045,6 +1046,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
   }
 
   .tile {
@@ -1464,6 +1466,7 @@ input[type=number] {
 .quantity-btn-increment {
   border-radius: 0 3px 3px 0;
   border-left: none;
+  background: #fff;
 }
 
 .quantity-btn-decrement {
@@ -1471,6 +1474,7 @@ input[type=number] {
   border: 1px solid #ebebeb;
   border-right: none !important;
   pointer-events: none;
+  background: #fff;
 }
 
 .quantity-btn-decrement svg {
@@ -2310,6 +2314,8 @@ input[type=number] {
 
 .bag-page-container {
   width: 910px;
+  position: relative;
+  max-width: 910px;
 }
 
 .bag-page-header {
@@ -2334,10 +2340,9 @@ input[type=number] {
   margin-bottom: 1.5rem;
   border-radius: 17px;
   background: hsla(0,0%,100%,.8);
+  background: #f5f5f7;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .bag-page-table-item-img-container img {
@@ -2367,6 +2372,12 @@ input[type=number] {
   white-space: nowrap;
   overflow: hidden;
   width: 200px;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.bag-page-table-item-name:hover {
+  color: #0066cc;
 }
 
 .bag-page-item-price span {
@@ -2394,7 +2405,6 @@ input[type=number] {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
 }
 
 .item-total-price {
@@ -2431,12 +2441,33 @@ input[type=number] {
 
 .check-out-and-remove-all-btn-container {
   margin-top: 1rem;
-  display: none;
-  justify-content: flex-end;
-  align-items: flex-start;
+  padding: 1rem 0;
+  background: hsla(0,0%,100%,.8);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  max-width: 910px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  padding-bottom: 2rem;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 2rem 0;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  border-radius: 17px;
+}
+
+.check-out-and-remove-all-btn-container header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1rem;
+  padding-left: 0;
+  gap: 3rem;
+}
+
+.checkout-btn-container {
   width: 100%;
 }
 
@@ -2459,7 +2490,6 @@ input[type=number] {
   gap: 1rem;
   font-size: 1.1rem;
   color: #1d1d1f;
-  width: 100%;
 }
 
 @media screen and (max-width: 950px) {
@@ -2856,11 +2886,13 @@ input[type=number] {
 .btnin {
   border-right: 1px solid #d3d3d3;
   border-radius: 3px 0 0 3px;
+  background-color: #fff;
 }
 
 .btnde {
   border-left: 1px solid #d3d3d3;
   border-radius: 0 3px 3px 0;
+  background-color: #fff;
 }
 
 .gumanakana1 {
