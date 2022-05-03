@@ -78,71 +78,27 @@
   </div>
   <div class="product-review-section">
     <div class="product-review-section-container">
-      <header>Product comments</header>
-      <div class="reviews">
-        <div class="profile">
-          <img src="./img/blank-profile.jpeg" alt="">
-        </div>
-        <div class="comment-box">
-          <div class="profile-name">Cathy Quiza</div>
-          <div class="comment-time">2022-02-08 21:59</div>
-          <div class="comment">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos doloribus placeat qui error voluptas deserunt cum est accusantium animi officiis, repellat debitis veniam iure adipisci porro odio, alias facere magnam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae illum optio tempora fuga nostrum vero quia. Blanditiis molestiae atque quaerat! Debitis dolor odio ex labore repellat eligendi amet nulla animi, ratione saepe adipisci fuga ipsam accusantium, distinctio a excepturi expedita fugiat minus architecto exercitationem perspiciatis nemo mollitia! Ducimus sit consequatur reiciendis deserunt, perspiciatis ex voluptates vitae accusantium obcaecati nesciunt, minus rem eaque quisquam dolores saepe placeat, repellendus numquam natus nihil illum exercitationem temporibus alias voluptatem! Distinctio praesentium fugiat nulla, beatae doloribus inventore perferendis natus molestiae libero nostrum rerum! Officia beatae, quasi hic repellat nesciunt autem quis maiores accusamus minus architecto at illo, omnis nostrum doloribus placeat fugit. Quod tempore nobis sequi voluptates, nihil quibusdam ipsa ut, maiores iste quis, fuga eligendi labore illum. Ad ratione expedita quia, iure blanditiis atque est fugit! Autem, corporis molestiae odio laboriosam aliquid quibusdam fugit excepturi, harum, officia delectus labore quis quasi ab facere ex perspiciatis laborum quod nobis nostrum enim. Molestiae optio esse hic harum quod nostrum quis aliquam expedita aliquid ad eligendi provident veniam atque architecto velit distinctio quasi impedit, corrupti laudantium explicabo fuga odio in eum qui. Enim harum ab maiores dolores voluptatibus! Animi tenetur inventore nihil impedit earum rem deserunt!
-          </div>
-        </div>
-      </div>
-      <div class="reviews">
-        <div class="profile">
-          <img src="./img/blank-profile.jpeg" alt="">
-        </div>
-        <div class="comment-box">
-          <div class="profile-name">Marlon Adova</div>
-          <div class="comment-time">2022-02-08 21:59</div>
-          <div class="comment">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos doloribus placeat qui error voluptas deserunt cum est accusantium animi officiis, repellat debitis veniam iure adipisci porro odio, alias facere magnam.
-          </div>
-        </div>
-      </div>
-      <div class="reviews">
-        <div class="profile">
-          <img src="./img/blank-profile.jpeg" alt="">
-        </div>
-        <div class="comment-box">
-          <div class="profile-name">Mandy Ruazol</div>
-          <div class="comment-time">2022-02-08 21:59</div>
-          <div class="comment">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos doloribus placeat qui error voluptas deserunt cum est accusantium animi officiis, repellat debitis veniam iure adipisci porro odio, alias facere magnam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor praesentium harum vel ut sint ex, enim facilis eum sapiente expedita magnam voluptatibus veritatis nihil non possimus cum voluptate. Modi magnam, inventore totam voluptatum delectus earum amet hic vero natus blanditiis voluptatem! Magnam quia et adipisci in distinctio debitis molestias mollitia quibusdam similique a iure eos vitae, consectetur, quas aliquid animi ea quod eum dolorum, ad sit. Facere esse voluptatem nulla repellat, nemo perspiciatis placeat voluptate veritatis, officiis id ratione culpa obcaecati illo nam amet vel. Doloremque non voluptates molestias omnis!
-          </div>
-        </div>
-      </div>
-      <div class="reviews">
-        <div class="profile">
-          <img src="./img/blank-profile.jpeg" alt="">
-        </div>
-        <div class="comment-box">
-          <div class="profile-name">Princess Pocon</div>
-          <div class="comment-time">2022-02-08 21:59</div>
-          <div class="comment">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          </div>
-        </div>
-      </div>
-      <!-- comment reviews -->
-      <div class="user-review">
+      <header>
+        <span>Product comments</span>
+        <span class="comment-count"></span>
+      </header>
+        <div class="user-review">
         <div class="profile">
           <img src="./img/blank-profile.jpeg" alt="">
         </div>
         <div class="type-comment-box">
-          <div class="send-review-input-container">
-            <input placeholder="Add your comments or suggestions" type="text" class="comment-input">
+          <form action="#" class="send-review-input-container" id="comment-form">
+            <input placeholder="Add your comments or suggestions" name="comment" type="text" class="comment-input" autocomplete="off">
             <div class="comment-input-border-bottom"></div>
-          </div>
+          </form>
           <div class="send-review-btn-container">
             <button class="cancel-review">Cancel</button>
-            <button class="send-review">Comment</button>
+            <button class="send-review" form="comment-form">Comment</button>
           </div>
         </div>
       </div>
+      <div class="reviews-container"></div>
+      <!-- comment reviews -->
     </div>
   </div>
 

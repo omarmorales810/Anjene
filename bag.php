@@ -4,12 +4,11 @@
     <div class="bag-page-container">
       <div class="bag-page-header">(0 Item)</div>
       <div id="bag-page-table" class="bag-page-table"></div>
-      <!-- <?php if (isset($session_id)) { ?>
-        <div class="check-out-and-remove-all-btn-container">
-          <span class="total-item-price">30, 000.00</span>
-          <button class="checkout-btn">Checkout</button>
-        </div>
-      <?php } ?> -->
+
+      <div class="check-out-and-remove-all-btn-container">
+        <span class="total-item-price"></span>
+        <button class="checkout-btn">Checkout</button>
+      </div>
     </div>
   </section>
   <footer class="footer">
@@ -19,5 +18,58 @@
   <script src="./js/nav.js"></script>
   <script src="./js/removeTransitionOnResize.js"></script>
   <script src="./js/bagItem.js"></script>
+  <script>
+    setInterval(() => {
+    $.ajax({
+    url: 'php/bag_header_counter.php',
+    type: 'GET',
+    data: "check",
+    success: function(response) {
+      $('.bag-page-header').html("(" + response + " Item)");
+    }
+    });
+  }, 300);
+  </script>
+
+  <script>
+    const checkoutContainer = document.querySelector(".check-out-and-remove-all-btn-container");
+    setInterval(() => {
+    let xhr = new XMLHttpRequest(); // Creating XML object.
+    xhr.open("POST", "php/bag_show_checkout.php", true);
+    xhr.onload = () => {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          let data = xhr.response;
+          if (data == "show") {
+            checkoutContainer.style.display = "flex";
+          }
+          else {
+            checkoutContainer.style.display = "none";
+          }
+        }
+      }
+    }
+    xhr.send();
+  }, 300);
+  </script>
+
+  <script>
+    const totalPrice = document.querySelector(".total-item-price");
+    setInterval(() => {
+    let xhr = new XMLHttpRequest(); // Creating XML object.
+    xhr.open("POST", "php/bag_total_price.php", true);
+    xhr.onload = () => {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          let data = xhr.response;
+          totalPrice.innerHTML = "Total (₱" + data + ")";
+        }
+      }
+    }
+    xhr.send();
+  }, 1000);
+  </script>
+
+
 </body>
 </html>

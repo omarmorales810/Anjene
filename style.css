@@ -164,6 +164,7 @@ img {
 
 
 
+
 /* --------------------------- Header --------------------------- */
 .nav {
   height: 50px;
@@ -1468,7 +1469,7 @@ input[type=number] {
 .quantity-btn-decrement {
   border-radius: 3px 0 0 3px;
   border: 1px solid #ebebeb;
-  border-right: none;
+  border-right: none !important;
   pointer-events: none;
 }
 
@@ -1642,15 +1643,19 @@ input[type=number] {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .product-review-section-container header {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 0rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
   width: 100%;
   padding-bottom: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .reviews {
@@ -1660,6 +1665,10 @@ input[type=number] {
   padding: 20px 0px;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
   width: 100%;
+}
+
+.reviews:first-child {
+  padding-top: 10px;
 }
 
 .profile img {
@@ -1686,6 +1695,8 @@ input[type=number] {
   font-size: 14px;
   margin-top: 0.5rem;
   line-height: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 
@@ -1695,10 +1706,10 @@ input[type=number] {
   gap: 1.5rem;
   align-items: flex-start;
   padding: 20px 0px;
+  padding-bottom: 0;
   padding-right: 0;
   width: 100%;
   position: relative;
-  margin-bottom: 30px;
 }
 
 .type-comment-box {
@@ -2420,7 +2431,7 @@ input[type=number] {
 
 .check-out-and-remove-all-btn-container {
   margin-top: 1rem;
-  display: flex;
+  display: none;
   justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;
@@ -2840,6 +2851,34 @@ input[type=number] {
     text-align: center;
   }
 }
+
+
+.btnin {
+  border-right: 1px solid #d3d3d3;
+  border-radius: 3px 0 0 3px;
+}
+
+.btnde {
+  border-left: 1px solid #d3d3d3;
+  border-radius: 0 3px 3px 0;
+}
+
+.gumanakana1 {
+  border: 1px solid #ebebeb !important;
+  border-right: 1px solid #d3d3d3 !important;
+  pointer-events: none !important;
+  fill: #d3d3d3 !important;
+  color: #d3d3d3 !important;
+}
+
+.gumanakana2  {
+  border: 1px solid #ebebeb !important;
+  border-left: 1px solid #d3d3d3 !important;
+  pointer-events: none !important;
+  fill: #d3d3d3 !important;
+  color: #d3d3d3 !important;
+}
+
 
 
 

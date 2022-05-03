@@ -19,7 +19,7 @@ if (isset($_SESSION['user'])) {
   $increment_form = "quantity-form-increment";
   $decrement_btn = "quantity-btn-decrement";
   $increment_btn = "quantity-btn-increment";
-  $quantity_input = "quantity-input";
+  $quantity_input = "bag-quantity-input";
   $count = 0;
 
   if ($rowCount > 0) {
@@ -48,13 +48,13 @@ if (isset($_SESSION['user'])) {
                       <div class='bag-page-table-item-quantity'>
                         <div class='quantity-btn-container'>
                           <form action='#' id='".$increment_form."".$count."'>
-                            <button class='quantity-btn' id='".$increment_btn."".$count."'>
+                            <button class='quantity-btn btnin' id='".$increment_btn."".$count."'>
                               <svg style='width: 12px; height: 20px' fill='#707070' enable-background='new 0 0 10 10' viewBox='0 0 10 10' x='0' y='0' class='shopee-svg-icon'><polygon points='4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5'></polygon></svg>
                             </button>
                           </form>
                           <input type='number' id='".$quantity_input."".$count."' class='quantity-input bag-quantity-input' name='add-to-bag-quantity' value='$product_quantity'>
                           <form action='#' id='".$decrement_form."".$count."'>
-                            <button class='quantity-btn' id='".$decrement_btn."".$count."'>
+                            <button class='quantity-btn btnde' id='".$decrement_btn."".$count."'>
                               <svg style='width: 12px; height: 20px' fill='#707070' enable-background='new 0 0 10 10' viewBox='0 0 10 10' x='0' y='0' class='shopee-svg-icon icon-plus-sign'><polygon points='10 4.5 5.5 4.5 5.5 0 4.5 0 4.5 4.5 0 4.5 0 5.5 4.5 5.5 4.5 10 5.5 10 5.5 5.5 10 5.5'></polygon></svg>
                             </button>
                           </form>
@@ -99,6 +99,16 @@ if (isset($_SESSION['user'])) {
                       e.preventDefault();
                     }
 
+                    if ($product_quantity <= 1) {
+                      buttonDecrement$count.classList.add('gumanakana1');
+                      incrementBtnSvg$count.classList.add('fade-border-svg');
+                    }
+
+                    if ($product_quantity >= $product_stock) {
+                      buttonIncrement$count.classList.add('gumanakana2');
+                      decrementBtnSvg$count.classList.add('fade-border-svg');
+                    }
+
                     button$count.onclick = () => {
                       let xhr = new XMLHttpRequest(); // Creating XML object
                       xhr.open('GET', './php/bag_delete_item.php?item_id=$id', true);
@@ -128,22 +138,11 @@ if (isset($_SESSION['user'])) {
                         let formData = new FormData(deleteForm$count); // Creating new formData object
                         xhr.send(formData);
                         
-                        var resizeTimer$count;
                         buttonDecrement$count.classList.add('fade-border');
                         buttonIncrement$count.classList.add('fade-border');
                         quantityInput$count.classList.add('fade-border');
                         decrementBtnSvg$count.classList.add('fade-border-svg');
                         incrementBtnSvg$count.classList.add('fade-border-svg');
-                        clearTimeout(resizeTimer);
-                        resizeTimer$count = setTimeout(() => {
-                          buttonDecrement$count.classList.remove('fade-border');
-                          buttonIncrement$count.classList.remove('fade-border');
-                          quantityInput$count.classList.remove('fade-border');
-                          decrementBtnSvg$count.classList.remove('fade-border-svg');
-                          incrementBtnSvg$count.classList.remove('fade-border-svg');
-                        }, 1000);
-
-                        alert('test');
                       }
                     }
 
@@ -161,20 +160,11 @@ if (isset($_SESSION['user'])) {
                         let formData = new FormData(deleteForm$count); // Creating new formData object
                         xhr.send(formData);
 
-                        var resizeTimer$count;
                         buttonDecrement$count.classList.add('fade-border');
                         buttonIncrement$count.classList.add('fade-border');
                         quantityInput$count.classList.add('fade-border');
                         decrementBtnSvg$count.classList.add('fade-border-svg');
                         incrementBtnSvg$count.classList.add('fade-border-svg');
-                        clearTimeout(resizeTimer);
-                        resizeTimer$count = setTimeout(() => {
-                          buttonDecrement$count.classList.remove('fade-border');
-                          buttonIncrement$count.classList.remove('fade-border');
-                          quantityInput$count.classList.remove('fade-border');
-                          decrementBtnSvg$count.classList.remove('fade-border-svg');
-                          incrementBtnSvg$count.classList.remove('fade-border-svg');
-                        }, 1000);
                       }
                     }
 

@@ -15,6 +15,12 @@ const modal = document.querySelector(".modal");
 const modalBanner = document.querySelector(".modal-banner");
 const modalBtn = document.querySelector(".modal-btn");
 
+const commentBtn = document.querySelector(".send-review");
+const commentForm = document.querySelector("#comment-form");
+
+const commentContainer = document.querySelector(".reviews-container");
+const commentCount = document.querySelector(".comment-count");
+
 productForm.onsubmit = (e) => {
   e.preventDefault(); // Prevent form from submitting
 }
@@ -53,15 +59,6 @@ modalBtn.onclick = () => {
 
 
 
-
-
-
-
-
-
-
-
-
 // Comment Section
 
 // Bag quantity counter
@@ -87,4 +84,87 @@ sendReviewInput.oninput = () => {
     sendReviewBtn.classList.remove("active2");
   }
 }
+
+
+
+
+
+commentForm.onsubmit = (e) => {
+  e.preventDefault(); // Prevent form from submitting
+}
+
+commentBtn.onclick = () => {
+  let xhr = new XMLHttpRequest(); // Creating XML object.
+  xhr.open("POST", "php/insert_comment.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
+
+        if (data == "comment_success") {
+          cancelBtn.classList.remove('active');
+          sendReviewBtn.classList.remove("active");
+          sendReviewBtn.classList.remove("active2");
+          sendReviewInput.value = "";
+        }
+        else {
+          location.href="login.php";
+        }
+      }
+    }
+  }
+  let formData = new FormData(commentForm); // Creating new formData object
+  xhr.send(formData); // Sending the form data to php
+}
+
+
+
+setInterval(() => {
+  let xhr = new XMLHttpRequest(); // Creating XML object.
+  xhr.open("POST", "php/display_comment.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
+        commentContainer.innerHTML = data;
+      }
+    }
+  }
+  xhr.send();
+}, 300);
+
+
+
+
+
+setInterval(() => {
+  let xhr = new XMLHttpRequest(); // Creating XML object.
+  xhr.open("POST", "php/count_comment.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
+        commentCount.innerHTML = data + " comments";
+      }
+    }
+  }
+  xhr.send();
+}, 300);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
