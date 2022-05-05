@@ -12,7 +12,6 @@
   <div class="form-wrapper">
     <header class="header">Create Your Account</header>
     <div class="intro-form-text">
-      <span>Your need to create your own account, before you can go shopping.</span>
       <span>already have an account? <a href="login.php">Login now</a></span>
     </div>
     <div class="alert"></div>

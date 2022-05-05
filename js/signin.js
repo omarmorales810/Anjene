@@ -15,7 +15,6 @@ signInBtn.addEventListener('click', () => {
         let data = xhr.response;
         
         if (data == 'success') {
-          alert("successfully loggedin");
           location.href = 'index.php';
         }
         else {

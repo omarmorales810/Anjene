@@ -187,27 +187,13 @@ if (isset($_SESSION['user'])) {
                 </div>";
   }
 }
-else {
-  $output .= "<div class='empty-bag-container'>
-                  <div class='empty-bag-message-container'>
-                    <div class='empty-bag-text'>Your bag is empty</div>
-                    <div class='empty-bag-message'>Sign in to see if you have any saved items. Or continue shopping.</div>
-                  </div>
-                  <div class='bag-link-container'>
-                    <a href='./login.php' class='bag-link'>
-                      <button class='sign-in-bag-btn bag-page-btn'>Sign in</button>
-                    </a>
-                    <a href='./index.php' class='bag-link'>
-                      <button class='bag-continue-shopping-btn bag-page-btn'>Continue Shopping</button>
-                    </a>
-                  </div>
-                </div>";
-}
 
 
 echo $output;
 
-?>
+
+                
+
 
 
 
