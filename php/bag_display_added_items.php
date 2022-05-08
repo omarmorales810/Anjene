@@ -37,7 +37,7 @@ if (isset($session_id)) {
                         <span class="bag-added-item-name">'.$product_name.'</span>
                       </div>
                       <div class="bag-added-item-right">
-                        <span class="bag-added-item-price">'.number_format( $product_price, 2, '.', ', ' ).'</span>
+                        <span class="bag-added-item-price">₱'.number_format( $product_price, 2, '.', ', ' ).'</span>
                       </div>
                     </a>';   
     }

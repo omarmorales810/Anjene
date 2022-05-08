@@ -117,8 +117,6 @@ commentBtn.onclick = () => {
   xhr.send(formData); // Sending the form data to php
 }
 
-
-
 setInterval(() => {
   let xhr = new XMLHttpRequest(); // Creating XML object.
   xhr.open("POST", "php/display_comment.php", true);
@@ -132,10 +130,6 @@ setInterval(() => {
   }
   xhr.send();
 }, 300);
-
-
-
-
 
 setInterval(() => {
   let xhr = new XMLHttpRequest(); // Creating XML object.

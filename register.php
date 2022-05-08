@@ -12,20 +12,12 @@
   <div class="form-wrapper">
     <header class="header">Create Your Account</header>
     <div class="intro-form-text">
-      <span>already have an account? <a href="login.php">Login now</a></span>
+      <span>Already have an account? <a href="login.php">Login now</a></span>
     </div>
     <div class="alert"></div>
     <form action="#" class="form signup" method="POST">
-      <div class="name-field">
-        <div class="field">
-          <input type="text" placeholder="First name" name="first-name" autocomplete="off">
-        </div>
-        <div class="field">
-          <input type="text" placeholder="Surname" name="surname" autocomplete="off">
-        </div>
-      </div>
       <div class="field">
-        <input type="text" placeholder="Email Address" name="email" autocomplete="off">
+        <input type="text" placeholder="Email address" name="email" autocomplete="off">
       </div>
       <div class="field password-field">
         <input type="password" placeholder="Password" name="password" autocomplete="off">
