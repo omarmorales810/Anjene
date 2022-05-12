@@ -72,7 +72,7 @@
                 </li>
                 <li class="bag-view-item bag-view-item-user-sign-in">
                   <?php if (isset($_SESSION["user"])) { ?>
-                    <a href="./php/logout.php" class="bag-view-link">Log out</a>
+                    <a href="./php/logout.php" class="bag-view-link">Sign out</a>
                   <?php } else { ?>
                     <a href="./login.php" class="bag-view-link">Sign in</a>
                   <?php } ?>
@@ -95,7 +95,7 @@
           <svg class="search-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="88" viewBox="0 0 20 88"><rect width="20" height="44" fill="none"/><path d="M13.98,27.343l-3.5-3.5a5.436,5.436,0,1,0-.778.777l3.5,3.5a.55.55,0,1,0,.778-.778ZM1.959,20.418a4.319,4.319,0,1,1,4.319,4.32A4.323,4.323,0,0,1,1.959,20.418Z" fill="gray"/></svg>
         </div>
 
-        <form action="../search.php" class="search-form" method="GET" style="width: 100%; max-width: 700px;">
+        <form action="../result.php" class="search-form" method="GET" style="width: 100%; max-width: 700px;">
           <input type="text" name="search_query" class="search-input" placeholder="Search in Anjene" autocomplete="off">
           <button style="visibility: hidden; display: none; opacity: 0; pointer-events: none;"></button>
         </form>
@@ -113,7 +113,7 @@
             <div class="search-box-icon">
               <svg class="search-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="88" viewBox="0 0 20 88"><rect width="20" height="90" fill="none"/><path d="M13.98,27.343l-3.5-3.5a5.436,5.436,0,1,0-.778.777l3.5,3.5a.55.55,0,1,0,.778-.778ZM1.959,20.418a4.319,4.319,0,1,1,4.319,4.32A4.323,4.323,0,0,1,1.959,20.418Z" fill="gray"/></svg>
             </div>
-            <form action="../search.php" class="search-form" method="GET" style="width: 100%; max-width: 700px;">
+            <form action="../result.php" class="search-form" method="GET" style="width: 100%; max-width: 700px;">
               <input type="text" class="mobile-nav-search-input" name="search_query" placeholder="Search in Anjene" autocomplete="off">
             </form>
           </div>

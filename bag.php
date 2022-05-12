@@ -59,52 +59,59 @@
       </div>
     </div>
   </div> -->
-  <div class="modal-remove-item">
+
+  <!-- <div class="modal-remove-item">
     <div class="modal-remove-item-container">
-    <svg class="trashcan-svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="593.727px" height="593.727px" viewBox="0 0 593.727 593.727" style="enable-background:new 0 0 593.727 593.727;"xml:space="preserve"><g><g><path d="M491.362,593.727H102.374c-20.865,0-37.84-16.975-37.84-37.84v-448.5h464.668v448.5C529.202,576.752,512.228,593.727,491.362,593.727z M79.677,122.529v433.357c0,12.516,10.182,22.697,22.697,22.697h388.989c12.516,0,22.697-10.182,22.697-22.697V122.529H79.677z"/></g><g><path d="M550.8,91.913H42.927V58.382c0-20.86,16.973-37.831,37.835-37.831h192.852C276.618,8.58,286.12,0,297.506,0
-			c11.399,0,20.907,8.578,23.905,20.551H512.97c20.859,0,37.83,16.971,37.83,37.831V91.913L550.8,91.913z M58.07,76.77h477.587V58.382c0-12.51-10.178-22.688-22.688-22.688h-205.57l-0.148-7.42c-0.145-7.24-4.516-13.131-9.745-13.131c-5.219,0-9.586,5.893-9.736,13.136l-0.154,7.415H80.762c-12.512,0-22.692,10.177-22.692,22.688V76.77z"/></g><g><path d="M144.621,546.275c-15.949,0-28.924-12.977-28.924-28.926V196.011c0-15.95,12.975-28.926,28.924-28.926c15.95,0,28.926,12.976,28.926,28.926V517.35C173.547,533.299,160.571,546.275,144.621,546.275z M144.621,182.228c-7.599,0-13.781,6.183-13.781,13.783V517.35c0,7.6,6.183,13.783,13.781,13.783c7.601,0,13.783-6.184,13.783-13.783V196.011C158.404,188.411,152.222,182.228,144.621,182.228z"/></g><g>
-		<path d="M243.094,546.275c-15.95,0-28.925-12.977-28.925-28.926V196.011c0-15.95,12.976-28.926,28.925-28.926
-			c15.949,0,28.925,12.976,28.925,28.926V517.35C272.019,533.299,259.043,546.275,243.094,546.275z M243.094,182.228
-			c-7.6,0-13.782,6.183-13.782,13.783V517.35c0,7.6,6.183,13.783,13.782,13.783s13.782-6.184,13.782-13.783V196.011
-			C256.876,188.411,250.694,182.228,243.094,182.228z"/></g><g>
-		<path d="M341.565,546.275c-15.949,0-28.926-12.977-28.926-28.926V196.011c0-15.95,12.977-28.926,28.926-28.926
-			s28.926,12.976,28.926,28.926V517.35C370.491,533.299,357.515,546.275,341.565,546.275z M341.565,182.228
-			c-7.6,0-13.783,6.183-13.783,13.783V517.35c0,7.6,6.184,13.783,13.783,13.783s13.783-6.184,13.783-13.783V196.011
-			C355.347,188.411,349.165,182.228,341.565,182.228z"/></g>
-	<g><path d="M440.038,546.275c-15.955,0-28.934-12.977-28.934-28.926V196.011c0-15.95,12.979-28.926,28.934-28.926
-			c15.949,0,28.924,12.976,28.924,28.926V517.35C468.962,533.299,455.987,546.275,440.038,546.275z M440.038,182.228
-			c-7.605,0-13.791,6.183-13.791,13.783V517.35c0,7.6,6.186,13.783,13.791,13.783c7.6,0,13.781-6.184,13.781-13.783V196.011
-			C453.819,188.411,447.638,182.228,440.038,182.228z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-      <div class="modal-text">Do you want to remove the item?</div>
+      <img class="trashcan" src="./img/trash-can-outline-svgrepo-com.svg" alt="">
+      <div class="modal-text">Item has been removed</div>
       <div class="modal-btn-container">
-        <button class="modal-remove-btn" id="modal-remove-btn-yes">Yes</button>
-        <button class="modal-remove-btn" id="modal-remove-btn-no">No</button>
+        <button class="modal-remove-btn" id="modal-remove-btn-yes">Okay</button>
       </div>
     </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  </div> -->
+  <div class="wrapper" id="delivery-wrapper">
+    <header class="header">Your address</header>
+    <div class="intro-form-text">To place order, please fill out the form</div>
+    <form action="#" class="delivery-form address-form">
+      <div class="form-container">
+        <label class="label" for="">Name</label>
+        <div class="name-field">
+          <div class="field">
+            <input type="text" class="first-name-field" placeholder="Enter your first name" name="first-name" autocomplete="off">
+            <div class="error-txt first-name-error-txt">The length of first name should be atleast 3 characters</div>
+          </div>
+          <div class="field">
+            <input type="text" class="surname-field" placeholder="Enter your surname" name="surname" autocomplete="off">
+            <div class="error-txt surname-error-txt">The length of surname should be atleast 3 characters</div>
+          </div>
+        </div>
+        <label class="label" for="">Mobile Number</label>
+        <div class="field mobile-field">
+          <input type="text" class="mobile-input" placeholder="Enter your mobile number" name="mobile" autocomplete="off">
+          <div class="error-txt mobile-error-txt">Please enter a valid phone number</div>
+          <p class="mobile-number-text">Be sure to enter a phone number you can always access. It will be used to contact you when we deliver your order.</p>
+        </div>
+        <label class="label" for="">Address Info</label>
+        <div class="field">
+          <input type="text" class="address-field" placeholder="Enter your house number, building, and street" name="address" autocomplete="off">
+          <div class="error-txt address-error-txt">Address length should be 5 - 150 characters</div>
+        </div>
+        <div class="field">
+          <input type="text" class="municipality-field" placeholder="Enter your municipality/city" name="city-municipality" autocomplete="off">
+          <div class="error-txt municipality-error-txt">Mandatory field</div>
+        </div>
+        <div class="field" style="margin-bottom: 0;">
+          <input type="text" class="barangay-field" placeholder="Enter your barangay" name="barangay" autocomplete="off">
+          <div class="error-txt barangay-error-txt">Mandatory field</div>
+        </div>
+      </div>
+      <div class="save-btn-container">
+        <button class="cancel-btn">Cancel</button>
+        <button class="save-btn">Save</button>
+      </div>
+    </form> 
   </div>
+<div class="delivery-banner"></div>
   <div class="modal-remove-banner"></div>
   <footer class="footer">
     <span>&copy; 2022 Anjene. All right reserved</span>
@@ -113,6 +120,13 @@
   <script src="./js/nav.js"></script>
   <script src="./js/removeTransitionOnResize.js"></script>
   <script src="./js/bagItem.js"></script>
+  <script src="./js/shipping_validation/firstName.js"></script>
+  <script src="./js/shipping_validation/surname.js"></script>
+  <script src="./js/shipping_validation/mobileNumber.js"></script>
+  <script src="./js/shipping_validation/address.js"></script>
+  <script src="./js/shipping_validation/cityMunicipality.js"></script>
+  <script src="./js/shipping_validation/barangay.js"></script>
+  <script src="./js/shipping.js"></script>
   <script>
     setInterval(() => {
     $.ajax({
@@ -198,6 +212,10 @@
   const checkOutForm = document.querySelector(".checkout-btn-container");
   const checkOutBtn = document.querySelector(".checkout-btn");
 
+  const deliveryBanner = document.querySelector(".delivery-banner");
+  const deliveryWrapper = document.querySelector("#delivery-wrapper");
+  const cancelBtn = document.querySelector(".cancel-btn");
+
   checkOutForm.onsubmit = (e) => {
     e.preventDefault();
   }
@@ -215,12 +233,20 @@
           }
           
           if (data == "wala-pa") {
-            location.href = "shipping-form.php";
+            deliveryBanner.classList.add("active");
+            deliveryWrapper.classList.add("active");
+            document.body.classList.add("hide-scrollbar");
           }
         }
       }
     }
     xhr.send();
+  }
+
+  cancelBtn.onclick = () => {
+    deliveryBanner.classList.remove("active");
+    deliveryWrapper.classList.remove("active");
+    document.body.classList.remove("hide-scrollbar");
   }
 </script>
 
