@@ -20,6 +20,7 @@ const commentForm = document.querySelector("#comment-form");
 
 const commentContainer = document.querySelector(".reviews-container");
 const commentCount = document.querySelector(".comment-count");
+const html = document.documentElement;
 
 productForm.onsubmit = (e) => {
   e.preventDefault(); // Prevent form from submitting
@@ -37,7 +38,7 @@ addToBagBtn.onclick = () => {
         if (data == "added-to-cart") {
           modal.classList.add("active");
           modalBanner.classList.add("active");
-          document.body.classList.add("hide-scrollbar");
+          body.classList.add("hide-scrollbar");
         }
 
         if (data == "user_session_not_set") {
@@ -53,7 +54,7 @@ addToBagBtn.onclick = () => {
 modalBtn.onclick = () => {
   modal.classList.remove("active");
   modalBanner.classList.remove("active");
-  document.body.classList.remove("hide-scrollbar");
+  body.classList.remove("hide-scrollbar");
 }
 
 

@@ -59,7 +59,16 @@ img {
 }
 
 .hide-scrollbar {
-  overflow: hidden !important;
+  position: fixed !important; 
+  overflow-y: scroll !important;
+}
+
+.item-counter.adjust-width {
+  width: 26px;
+  height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  right: -23px;
 }
 
 
@@ -289,7 +298,7 @@ img {
   height: 17px;
   border-radius: 50%;
   color: #fff;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   font-size: 12px;
@@ -445,6 +454,12 @@ img {
   font-size: 14px;
   padding: 0.5rem 0.5rem;
   display: none;
+}
+
+/* Logout */
+.fa-sign-out {
+  font-size: 15px;
+  color: #06c;
 }
 
 
@@ -850,6 +865,14 @@ img {
 
   .mobile-nav-link:hover {
     color: #707070;
+  }
+
+  .item-counter.adjust-width {
+    width: 26px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0px;
   }
   
 }
@@ -2297,7 +2320,7 @@ input[type=number] {
 }
 
 .search-item-short-description {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: #1d1d1f;
 }
@@ -3158,6 +3181,8 @@ input[type=number] {
   height: 100%;
   z-index: 2999;
   background: rgba(0, 0, 0, 0.4);
+  /* -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(200%) blur(70px); */
   pointer-events: none;
   opacity: 0;
   transition: opacity 200ms ease;

@@ -12,7 +12,7 @@
   <div class="form-wrapper">
     <header class="header">Welcome To Login</header>
     <div class="intro-form-text">
-      <span>Don't have an account? <a href="register.php">Register now</a></span>
+      <span style="font-size: 18px;">Don't have an account? <a href="register.php">Register now</a></span>
     </div>
     <div class="alert"></div>
     <form action="#" class="form sign-in">

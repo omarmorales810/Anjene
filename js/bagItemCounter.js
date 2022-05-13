@@ -8,12 +8,20 @@ setInterval(() => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         let data = xhr.response;
+        bagItemCounter.style.display = "flex";
 
         if (data == "hide-bag-item-counter") {
           bagItemCounter.innerHTML = 0;
         }
         else {
           bagItemCounter.innerHTML = data;
+        }
+
+        if (data == "9+") {
+          bagItemCounter.classList.add("adjust-width");
+        }
+        else {
+          bagItemCounter.classList.remove("adjust-width");
         }
       }
     }

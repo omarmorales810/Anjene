@@ -5,6 +5,7 @@
   $sql = "SELECT * FROM user_info WHERE user_id = {$user}";
   $result = mysqli_query($conn, $sql);
   $rowCount = mysqli_num_rows($result);
+  $count = 0;
 
   if ($rowCount > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
@@ -14,6 +15,16 @@
       $home = $row["house_address"];
       $municipality_city = $row["municipality_city"];
       $barangay = $row["barangay"];
+    }
+
+    $sql2 = "SELECT * FROM bag_item WHERE session_id = {$user}";
+    $result2 = mysqli_query($conn, $sql2);
+    $rowCount2 = mysqli_num_rows($result2);
+
+    if ($rowCount2 > 0) {
+      while ($row = mysqli_fetch_assoc($result2)) {
+        $count += 1;
+      }
     }
   }
 ?>
@@ -35,7 +46,7 @@
       <span>Tap to change address</span>
     </div>
   </div>
-  <form action="" id="" class="delivery-form2">
+  <!-- <form action="" id="" class="delivery-form2">
     <label class="label" for="" style="padding-bottom: 1rem;">Select Payment Method</label>
     <div class="payment-method-field-container">
       <div class="payment-method-field payment-method-field1">
@@ -62,60 +73,9 @@
         </div>
       </div>
     </div>
-  </form>
+  </form> -->
+  <label class="label" for="">Package (3 item)</label>
   <div class="shipping-item-container">
-    <label class="label" for="">Package (3 item)</label>
-    <div class="shipping-item">
-      <div class="shipping-item-left">
-        <div class="shipping-item-img-container">
-          <img src="./img/product_img9.png" alt="">
-          <div class="shipping-item-details">
-            <div class="shipping-item-name">Stainless Steel Steak Spatula</div>
-            <div class="shipping-item-price">P400.00</div>
-            <div class="shipping-item-quantity">Qty: 4</div>
-          </div>
-        </div>
-      </div>
-      <div class="shipping-item-right">
-        <div class="remove-item-container">
-          <button>Remove</button>
-        </div>
-      </div>
-    </div>
-    <div class="shipping-item">
-      <div class="shipping-item-left">
-        <div class="shipping-item-img-container">
-          <img src="./img/product_img9.png" alt="">
-          <div class="shipping-item-details">
-            <div class="shipping-item-name">Stainless Steel Steak Spatula</div>
-            <div class="shipping-item-price">P400.00</div>
-            <div class="shipping-item-quantity">Qty: 4</div>
-          </div>
-        </div>
-      </div>
-      <div class="shipping-item-right">
-        <div class="remove-item-container">
-          <button>Remove</button>
-        </div>
-      </div>
-    </div>
-    <div class="shipping-item">
-      <div class="shipping-item-left">
-        <div class="shipping-item-img-container">
-          <img src="./img/product_img9.png" alt="">
-          <div class="shipping-item-details">
-            <div class="shipping-item-name">Stainless Steel Steak Spatula</div>
-            <div class="shipping-item-price">P400.00</div>
-            <div class="shipping-item-quantity">Qty: 4</div>
-          </div>
-        </div>
-      </div>
-      <div class="shipping-item-right">
-        <div class="remove-item-container">
-          <button>Remove</button>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="total-summary-container">
     <label class="label" for="">Order Summary</label>
@@ -183,6 +143,7 @@
   </div>
 <div class="delivery-banner"></div>
 
+<script src="./js/shipping.js"></script>
 <script src="./js/removeTransitionOnResize.js"></script>
 <script src="./js/nav.js"></script>
 <script>
@@ -194,22 +155,47 @@
   changeAddressBtn.onclick = () => {
     deliveryBanner.classList.add("active");
     deliveryWrapper.classList.add("active");
-    document.body.classList.add("hide-scrollbar");
+    if (<?php echo $count?> == 2) {
+      body.classList.add("hide-scrollbar");
+    }
   }
 
   cancelBtn.onclick = () => {
     deliveryBanner.classList.remove("active");
     deliveryWrapper.classList.remove("active");
-    document.body.classList.remove("hide-scrollbar");
+    if (<?php echo $count?> == 2) {
+      body.classList.remove("hide-scrollbar");
+    }
   }
 </script>
+
+<script>
+  var interval = 1000;
+  setInterval(() => {
+    $.ajax({
+      url: './php/display_shipping_item.php',
+      type: 'GET',
+      data: "check",
+
+      success: function(response) {
+        if (response != "empty-shipping-item") {
+          $('.shipping-item-container').html(response);
+        }
+
+        if (response == "empty-shipping-item") {
+          location.href = "bag.php";
+        }
+      }
+    });
+  }, interval);
+</script>
+
 <script src="./js/shipping_validation/firstName.js"></script>
 <script src="./js/shipping_validation/surname.js"></script>
 <script src="./js/shipping_validation/mobileNumber.js"></script>
 <script src="./js/shipping_validation/address.js"></script>
 <script src="./js/shipping_validation/cityMunicipality.js"></script>
 <script src="./js/shipping_validation/barangay.js"></script>
-<script src="./js/shipping.js"></script>
 
   
 <?php require_once "./require/footer.php"; ?>

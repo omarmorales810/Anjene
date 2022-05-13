@@ -12,7 +12,7 @@
   <div class="form-wrapper">
     <header class="header">Create Your Account</header>
     <div class="intro-form-text">
-      <span>Already have an account? <a href="login.php">Login now</a></span>
+      <span style="font-size: 18px;">Already have an account? <a href="login.php">Login now</a></span>
     </div>
     <div class="alert"></div>
     <form action="#" class="form signup" method="POST">

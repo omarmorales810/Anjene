@@ -1,6 +1,7 @@
 const deliveryForm = document.querySelector('.delivery-form');
 const saveBtn = document.querySelector('.save-btn');
 
+
 deliveryForm.addEventListener('submit', (e) => {
   e.preventDefault(); // Preventing form from submitting
 });
@@ -22,3 +23,7 @@ saveBtn.addEventListener('click', () => {
   let formData = new FormData(deliveryForm); // Creating new formData object
   xhr.send(formData);
 });
+
+
+
+
