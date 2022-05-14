@@ -3389,6 +3389,62 @@ input[type=number] {
   height: 17px;
 }
 
+.delivery-radio-input1:after {
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #e4e4e4;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.delivery-radio-input1:checked:after {
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #06c;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.delivery-radio-input2:after {
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #e4e4e4;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.delivery-radio-input2:checked:after {
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d6776a;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
 .payment-method-icon {
   color: #06c;
   font-size: 2rem;
@@ -3396,7 +3452,7 @@ input[type=number] {
 }
 
 .fa-gift-card {
-  color: rgb(214, 119, 106);
+  color: #d6776a;
 }
 
 .tap-to-add {
