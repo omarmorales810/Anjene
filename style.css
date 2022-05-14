@@ -2917,14 +2917,24 @@ input[type=number] {
   align-items: center;
   }
 
-  #loading i {
-    font-size: 2.5rem;
-    color: #1d1d1f;
-  }
+.shipping-loading {
+  position: relative;
+  height: 13.7vh;
+  width: 100%;
+  transform: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .loading {
-    padding: 10rem 1rem 1rem 1rem;
-    text-align: center;
+#loading i {
+  font-size: 2.5rem;
+  color: #1d1d1f;
+}
+
+.loading {
+  padding: 10rem 1rem 1rem 1rem;
+  text-align: center;
 }
 
 .spinner {
@@ -3295,13 +3305,12 @@ input[type=number] {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 1rem;
   padding: 1rem 0;
 }
 
 .save-btn {
   padding: 14px 16px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -3311,22 +3320,32 @@ input[type=number] {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 120px;
+  transition: background 200ms ease;
+}
+
+.save-btn:hover {
+  background: #429ffb;
 }
 
 .cancel-btn {
   padding: 14px 16px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background: #fd2b24;
-  color: #fff;
+  background: transparent;
+  color: #707070;
   font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 120px;
+  transition: color 200ms ease;
+}
+
+.cancel-btn:hover {
+  color: #909090;
 }
 
 .payment-method-field-container {
@@ -3345,6 +3364,7 @@ input[type=number] {
   padding: 18px 18px;
   padding-left: 12px;
   font-size: 16px;
+  font-weight: 400;
   outline: none; 
   background: hsla(0,0%,100%,.8);
   display: flex;
@@ -3353,7 +3373,9 @@ input[type=number] {
   flex-direction: row;
   height: 80px;
   gap: 1rem;
+  text-transform: capitalize;
 }
+
 
 .delivery-svg {
   height: 40px;
@@ -3367,9 +3389,14 @@ input[type=number] {
   height: 17px;
 }
 
+.payment-method-icon {
+  color: #06c;
+  font-size: 2rem;
+  padding: 0 1rem 0 0.5rem;
+}
 
-.payment-method-field1 {
-  
+.fa-gift-card {
+  color: rgb(214, 119, 106);
 }
 
 .tap-to-add {
@@ -3508,8 +3535,9 @@ input[type=number] {
 }
 
 .subtotal-price {
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #1d1d1f;
+  font-size: 16px !important;
 }
 
 .shipping-fee {
