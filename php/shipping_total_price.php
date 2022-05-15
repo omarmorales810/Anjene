@@ -10,6 +10,7 @@ $rowCount = mysqli_num_rows($result);
 
 if ($rowCount > 0) {
   while ($row = mysqli_fetch_assoc($result)) {
+    $_SESSION["order_subtotal"] = $row["SUM(bag_item.quantity * product.price)"];
     echo "₱" . number_format($row["SUM(bag_item.quantity * product.price)"] + 70, 2, '.', ', ' );
   }
 }

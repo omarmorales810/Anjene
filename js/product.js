@@ -12,8 +12,9 @@ const addToBagBtn = document.querySelector(".add-to-cart-link");
 const buyNowLink = document.querySelector(".buy-now-link");
 
 const modal = document.querySelector(".modal");
+const modalError = document.querySelector("#error-modal");
 const modalBanner = document.querySelector(".modal-banner");
-const modalBtn = document.querySelector(".modal-btn");
+const modalBtn = document.getElementsByClassName("modal-btn");
 
 const commentBtn = document.querySelector(".send-review");
 const commentForm = document.querySelector("#comment-form");
@@ -41,6 +42,12 @@ addToBagBtn.onclick = () => {
           body.classList.add("hide-scrollbar");
         }
 
+        if (data == "invalid") {
+          modalError.classList.add("show-error-modal");
+          modalBanner.classList.add("active");
+          body.classList.add("hide-scrollbar");
+        }
+
         if (data == "user_session_not_set") {
           location.href = "login.php";
         }
@@ -51,10 +58,13 @@ addToBagBtn.onclick = () => {
   xhr.send(formData); // Sending the form data to php
 }
 
-modalBtn.onclick = () => {
-  modal.classList.remove("active");
-  modalBanner.classList.remove("active");
-  body.classList.remove("hide-scrollbar");
+for (let i = 0; i < modalBtn.length; i++) {
+  modalBtn[i].onclick = () => {
+    modalError.classList.remove("show-error-modal");
+    modal.classList.remove("active");
+    modalBanner.classList.remove("active");
+    body.classList.remove("hide-scrollbar");
+  }
 }
 
 

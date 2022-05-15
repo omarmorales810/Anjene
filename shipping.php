@@ -37,17 +37,17 @@
     </div>
   </div>
   
-  <form action="" id="" class="delivery-form2">
+  <form action="#" id="payment-method-form" class="delivery-form2">
     <label class="label" for="" style="padding-bottom: 1rem;">Select Payment Method</label>
     <div class="payment-method-field-container">
       <div class="payment-method-field payment-method-field1">
         <span style="display: flex; justify-content: center; align-items: center;"><i class="fas fa-wallet payment-method-icon"></i>Cash on delivery</span>
-        <input type="radio" name="payment-type" class="delivery-radio-input delivery-radio-input1" checked>
+        <input type="radio" name="payment-type" class="delivery-radio-input delivery-radio-input1" value="COD" checked>
       </div>
       <div class="credit-debit-field payment-method-field2">
         <div class="payment-method-field" style="border-radius: 5px 5px 0px 0px;">
           <span style="display: flex; justify-content: center; align-items: center;"><i class="fas fa-gift-card payment-method-icon"></i></i>Credit/Debit Card</span>
-          <input type="radio" name="payment-type" class="delivery-radio-input delivery-radio-input2">
+          <input type="radio" name="payment-type" class="delivery-radio-input delivery-radio-input2" value="Credit/Debit">
         </div>
         <div class="tap-to-add-container">
           <span style="display: flex; justify-content: center; align-items: center;" class="tap-to-add">Tap to add card</span>
@@ -59,7 +59,7 @@
       </div>
     </div>
   </form>
-  <label class="label" for="">Package (3 item)</label>
+  <label class="label" for="">Package (<span class="shipping-item-counter">0 Item</span>)</label>
   <div class="shipping-item-container">
     <div id="#loading" class="shipping-loading">
       <svg role="status" class="spinner animation-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,8 +72,8 @@
     <label class="label" for="">Order Summary</label>
     <div class="order-summary">
       <div class="subtotal-item">
-        <span class="subtotal-text">Subtotal (3 item)</span>
-        <span class="subtotal-price total-item-price">P400.00</span>
+        <span class="subtotal-text">Subtotal (<span class="shipping-item-counter">0 Item</span>)</span>
+        <span class="subtotal-price total-item-price">₱0.00</span>
       </div>
       <div class="shipping-fee">
         <span class="shipping-fee-text">Shipping Fee</span>
@@ -81,12 +81,12 @@
       </div>
       <div class="total">
         <span class="total-text">Subtotal</span>
-        <span class="total-price-txt">P40, 000.00</span>
+        <span class="total-price-txt">₱0.00</span>
       </div>
     </div>
   </div>
   <div class="checkout-btn-container">
-    <button class="checkout-btn">Check Out</button>
+    <button form="payment-method-form" class="checkout-btn" id="shipping-checkout-btn">Check Out</button>
   </div>
 </div>
 
@@ -221,6 +221,56 @@
     xhr.send();
   }, 1000);
   </script>
+
+  <!-- Insert orders -->
+  <script>
+    const shippingCheckoutBtn = document.querySelector("#shipping-checkout-btn");
+    const shippingCheckoutForm = document.querySelector("#payment-method-form");
+
+    shippingCheckoutForm.onsubmit = (e) => {
+      e.preventDefault();
+    }
+
+    shippingCheckoutBtn.onclick = () => {
+      let xhr = new XMLHttpRequest(); // Creating XML object
+      xhr.open('POST', './php/shipping_insert_order.php', true);
+      xhr.addEventListener('load', () => {
+        if(xhr.readyState === XMLHttpRequest.DONE) {
+          if(xhr.status === 200) {
+            let data = xhr.response;
+            console.log(data);
+          }
+        }
+      });
+      let formData = new FormData(shippingCheckoutForm); // Creating new formData object
+      xhr.send(formData);
+    }
+  </script>
+
+
+
+<script>
+  const shippingItemCounter = document.getElementsByClassName("shipping-item-counter");
+  setInterval(() => {
+  // Ajax
+  let xhr = new XMLHttpRequest(); // Creating XML object.
+  xhr.open("GET", "./php/bag_item_counter.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
+        
+        if (data) {
+          for (let i = 0; i < shippingItemCounter.length; i++) {
+            shippingItemCounter[i].innerHTML = data + " Item";
+          }
+        }
+      }
+    }
+  }
+  xhr.send();
+}, 300);
+</script>
 
 <script src="./js/shipping_validation/firstName.js"></script>
 <script src="./js/shipping_validation/surname.js"></script>

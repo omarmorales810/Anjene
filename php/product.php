@@ -10,18 +10,31 @@ if (isset($_SESSION["user"])) {
   $quantity_add_to_bag = mysqli_real_escape_string($conn, $_POST["add-to-bag-quantity"]);
   $now = date('Y-m-d H:i:s');
 
-  $sql = "SELECT * FROM bag_item WHERE session_id = {$session_id} AND product_id = {$product_id}";
+  $sql = "SELECT bag_item.quantity, product.stock FROM bag_item INNER JOIN product ON bag_item.product_id = product.id WHERE session_id = {$session_id } AND product_id = {$product_id}";
   $result = mysqli_query($conn, $sql);
-  $rowCount = mysqli_num_rows($result);
 
-  if ($rowCount > 0) {
-    // Kapag nag add to bag si user tapos yung inadd to bag niya existing na sa bag, imbis na iinsert natin sa database iuupdate lang natin yung quantity ng product na yun.
-    if ($row = mysqli_fetch_assoc($result)) {
-      $sql = "UPDATE bag_item SET quantity = quantity + {$quantity_add_to_bag} WHERE session_id = {$session_id} AND product_id = {$product_id};";
+  if ($row = mysqli_fetch_assoc($result)) {
+    $db_bag_item_quantity = $row["quantity"];
+    $db_bag_item_stock = $row["stock"];
+    
+    if (($db_bag_item_quantity + $quantity_add_to_bag) > $db_bag_item_stock) {
+      echo "invalid";
+    }
+    else {
+      $sql = "SELECT * FROM bag_item WHERE session_id = {$session_id} AND product_id = {$product_id}";
       $result = mysqli_query($conn, $sql);
+      $rowCount = mysqli_num_rows($result);
 
-      if ($result) {
-        echo "added-to-cart";
+      if ($rowCount > 0) {
+        // Kapag nag add to bag si user tapos yung inadd to bag niya existing na sa bag, imbis na iinsert natin sa database iuupdate lang natin yung quantity ng product na yun.
+        if ($row = mysqli_fetch_assoc($result)) {
+          $sql = "UPDATE bag_item SET quantity = quantity + {$quantity_add_to_bag} WHERE session_id = {$session_id} AND product_id = {$product_id};";
+          $result = mysqli_query($conn, $sql);
+
+          if ($result) {
+            echo "added-to-cart";
+          }
+        }
       }
     }
   }
@@ -37,6 +50,8 @@ if (isset($_SESSION["user"])) {
 else {
   echo "user_session_not_set";
 }
+
+
 
 
 

@@ -4,7 +4,7 @@
     <div class="products-header">
       <div class="products-header-item">
         <span class="header-item header-item1">Recommended</span>
-        <span class="header-item header-item2">Best selling</span>
+        <!-- <span class="header-item header-item2">Best selling</span> -->
         <span class="header-bb-slider"></span>
       </div>
     </div>
